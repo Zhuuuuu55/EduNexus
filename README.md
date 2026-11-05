@@ -4,6 +4,22 @@ EduNexus 是面向计算机教育场景的智能教学平台，将课程知识�
 
 > [打开 EduNexus 项目主页和交互工作台](https://zhuuuuu55.github.io/EduNexus/#demo)。工作台在浏览器中渲染预设对话和四种模式。完整应用的源码、课件和运行数据不随展示站发布。
 
+## 本地预览
+
+在仓库目录运行：
+
+```powershell
+python -m http.server 4173
+```
+
+浏览器打开 [http://localhost:4173/](http://localhost:4173/) 预览首页和工作台。保留两个预览 HTML 与 `assets/` 的相对目录，使用 HTTP 预览可避免本地文件协议限制。
+
+## GitHub Pages
+
+在仓库的 **Settings → Pages → Build and deployment → Source** 选择 **GitHub Actions**。推送到 `main` 触发 `.github/workflows/pages.yml`；也可在 Actions 页面手动运行 **Deploy EduNexus homepage**。
+
+发布地址：[EduNexus 交互主页](https://zhuuuuu55.github.io/EduNexus/)。
+
 ## 平台功能
 
 - **智能对话与课程知识**：结合课程范围和资料开展问答，支持将相关内容整理为学习笔记。

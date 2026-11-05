@@ -913,9 +913,38 @@ section{scroll-margin-top:84px}
           <span class="bb-url">EduNexus 智联教枢 · 统一工作台</span>
         </div>
 
+        <nav class="demo-modes" id="workbench-demo-modes" aria-label="选择工作台演示模式" style="padding:10px 14px;flex-wrap:wrap">
+          <button type="button" class="demo-mode is-active" data-workbench-mode="public_affairs" aria-pressed="true">公共事务</button>
+          <button type="button" class="demo-mode" data-workbench-mode="knowledge_learning" aria-pressed="false">知识学习</button>
+          <button type="button" class="demo-mode" data-workbench-mode="algorithm_practice" aria-pressed="false">算法练习</button>
+          <button type="button" class="demo-mode" data-workbench-mode="ppt_creation" aria-pressed="false">PPT 制作</button>
+        </nav>
         <div class="demo-stage demo-production-stage" id="demoStage">
-          <iframe class="demo-production-frame" src="demo-workspace-preview.html?mode=public" title="EduNexus 真实工作台四模式体验"></iframe>
+          <iframe class="demo-production-frame" src="demo-workspace-preview.html?mode=public_affairs" title="EduNexus 真实工作台四模式体验"></iframe>
         </div>
+        <script>
+          (() => {
+            const controls = document.getElementById('workbench-demo-modes');
+            const frame = document.querySelector('#demoStage iframe');
+            const buttons = controls.querySelectorAll('[data-workbench-mode]');
+            let mode = 'public_affairs';
+            const sendMode = () => frame.contentWindow.postMessage(
+              { type: 'edunexus-demo-mode', mode },
+              location.protocol === 'file:' ? '*' : location.origin
+            );
+            controls.addEventListener('click', (event) => {
+              const selected = event.target.closest('[data-workbench-mode]');
+              if (!selected || mode === selected.dataset.workbenchMode) return;
+              mode = selected.dataset.workbenchMode;
+              for (const button of buttons) {
+                button.classList.toggle('is-active', button === selected);
+                button.setAttribute('aria-pressed', String(button === selected));
+              }
+              sendMode();
+            });
+            frame.addEventListener('load', sendMode);
+          })();
+        </script>
       </div>
 
       <p class="demo-foot">四个模式共用同一套工作台组件，切换模式后会自动呈现一组代表性工作流，帮助你快速理解每种模式适合处理什么问题。</p>
