@@ -1,34 +1,27 @@
 /* Repository-native, offline-compatible showcase. All feature/media mappings live in content.js. */
 (() => {
 'use strict';
-const data=window.LEARNING_SHOWCASE,base='assets/learning-showcase/',storageKey='edunexus-showcase-commentary-v2';
-let savedNotes={},storageAvailable=true;
-try{const stored=JSON.parse(localStorage.getItem(storageKey)||'{}');if(stored&&typeof stored==='object'&&!Array.isArray(stored))savedNotes=stored;}catch{storageAvailable=false;}
+const data=window.LEARNING_SHOWCASE,base='assets/learning-showcase/';
 const lightbox=document.querySelector('.ls-lightbox'),renderers=[];
 function pauseAll(){document.querySelectorAll('video').forEach(v=>v.pause());}
 function openImage(media){pauseAll();lightbox.querySelector('img').src=base+media.src;lightbox.querySelector('img').alt=media.title;lightbox.querySelector('h3').textContent=media.title;lightbox.querySelector('p').textContent=media.explanation;lightbox.showModal();}
 lightbox.querySelector('button').addEventListener('click',()=>lightbox.close());
 lightbox.addEventListener('click',e=>{if(e.target!==lightbox)return;const r=lightbox.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)lightbox.close();});
 document.querySelectorAll('video').forEach(v=>v.addEventListener('play',()=>document.querySelectorAll('video').forEach(other=>{if(other!==v)other.pause();})));
-function noteKey(point,media){return point.id+'/'+media.kind+'/'+media.id;}
-function exportNotes(){
- const text=['# 模拟课堂与学习笔记 · 演示讲解','',...['classroom','notes'].flatMap(name=>data[name].flatMap(point=>[
-  '## '+point.number+' '+point.title,'',point.summary,'','讲解要点：',...point.steps.map(t=>'- '+t),'','设计与学习价值：'+point.meaning,'',
-  ...point.media.flatMap(media=>['### '+media.title,'',media.explanation,'',...(savedNotes[noteKey(point,media)]?['我的补充：',savedNotes[noteKey(point,media)],'']:[])]),
-  ...(point.notice?['素材说明：'+point.notice,'']:[]),...(point.missing.length?['待补素材：'+point.missing.join('；'),'']:[]),'原测试记录：'+point.source,''
- ]))].join('\n');
- const url=URL.createObjectURL(new Blob(['\uFEFF'+text],{type:'text/markdown;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='模拟课堂与学习笔记-演示讲解.md';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
-}
-document.querySelectorAll('.ls-export-notes').forEach(b=>b.addEventListener('click',exportNotes));
 function bindTabKeys(list){list.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;const tabs=[...list.querySelectorAll('[role=tab]')].filter(t=>!t.disabled),i=tabs.indexOf(document.activeElement);if(i<0)return;e.preventDefault();const next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;tabs[next].click();tabs[next].focus();});}
 function setSelected(list,active){list.querySelectorAll('[role=tab]').forEach(b=>{b.setAttribute('aria-selected',String(b===active));b.tabIndex=b===active?0:-1;});}
 document.querySelectorAll('[data-feature]').forEach(stage=>{
- const name=stage.dataset.feature,points=data[name],nav=stage.querySelector('.ls-case-nav'),content=stage.querySelector('.ls-case-content'),video=stage.querySelector('video'),modes=stage.querySelector('.ls-mode'),switcher=stage.querySelector('.ls-media-switcher'),thumbs=stage.querySelector('.ls-image-thumbs'),textarea=stage.querySelector('textarea'),saveStatus=stage.querySelector('.ls-save-state');
+ const name=stage.dataset.feature,points=data[name],nav=stage.querySelector('.ls-case-nav'),content=stage.querySelector('.ls-case-content'),video=stage.querySelector('video'),modes=stage.querySelector('.ls-mode'),switcher=stage.querySelector('.ls-media-switcher'),thumbs=stage.querySelector('.ls-image-thumbs');
  const field=n=>stage.querySelector('[data-field="'+n+'"]');let currentPoint,activeMedia,mode='video';
  function selectMedia(media){
   video.pause();activeMedia=media;
   field('mediaTitle').textContent=media.title;field('clipTitle').textContent=media.title;field('clipExplanation').textContent=media.explanation;
   field('mediaType').textContent=media.kind==='video'?'视频实录':'原始截图';
+  field('explanationLabel').textContent=media.kind==='video'?'视频讲解':'图片说明';
+  stage.querySelector('.ls-explanation').dataset.kind=media.kind;
+  stage.querySelector('.ls-speaking-points').hidden=media.kind==='video';
+  stage.querySelector('.ls-point').hidden=media.kind==='video';
+  stage.querySelector('.ls-case-summary').hidden=media.kind==='video';
   stage.querySelector('.ls-load-error').hidden=true;
   switcher.querySelectorAll('button').forEach(b=>{b.setAttribute('aria-selected',String(b.dataset.media===media.id));b.tabIndex=b.dataset.media===media.id?0:-1;});
   thumbs.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.media===media.id)));
@@ -38,8 +31,6 @@ document.querySelectorAll('[data-feature]').forEach(stage=>{
    video.removeAttribute('src');video.load();const img=stage.querySelector('.ls-main-image img');img.src=base+media.src;img.alt=media.title;
    field('duration').textContent=media.width+' × '+media.height;
   }
-  textarea.value=savedNotes[noteKey(currentPoint,media)]||'';
-  saveStatus.textContent=storageAvailable?'补充文字按当前素材自动保存；可导出完整讲解。':'浏览器存储不可用，请使用“导出讲解文字”保留补充。';
  }
  function selectMode(kind){
   if(!currentPoint.media.some(m=>m.kind===kind))return;mode=kind;pauseAll();
@@ -76,10 +67,6 @@ document.querySelectorAll('[data-feature]').forEach(stage=>{
  stage.querySelector('.ls-main-image').addEventListener('click',()=>{if(activeMedia?.kind==='image')openImage(activeMedia);});
  stage.querySelector('.ls-main-image img').addEventListener('error',()=>stage.querySelector('.ls-load-error').hidden=false);
  video.addEventListener('error',()=>{if(activeMedia?.kind==='video'&&video.getAttribute('src'))stage.querySelector('.ls-load-error').hidden=false;});
- textarea.addEventListener('input',()=>{
-  savedNotes[noteKey(currentPoint,activeMedia)]=textarea.value;
-  try{localStorage.setItem(storageKey,JSON.stringify(savedNotes));storageAvailable=true;saveStatus.textContent='已保存到当前浏览器 · 可导出讲解文字';}catch{storageAvailable=false;saveStatus.textContent='当前浏览器无法保存，请导出讲解文字。';}
- });
  bindTabKeys(nav);bindTabKeys(modes);bindTabKeys(switcher);
  const fromHash=points.find(p=>'#case-'+p.id===location.hash);selectPoint(fromHash||points[0]);
  renderers.push({points,selectPoint});

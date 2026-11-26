@@ -59,7 +59,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/entry.jpg",
           "duration": 18.21,
           "sourceFile": "第二个.mp4",
-          "explanation": "从课程书架进入课件列表，说明卡片上的下载与开始课堂入口，再进入选中的课堂。"
+          "explanation": "用户可以顺利打开课程，下载对应课件，并开始模拟课堂。"
         }
       ],
       "notice": "",
@@ -211,7 +211,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/builds.jpg",
           "duration": 10.21,
           "sourceFile": "动画分步.mp4",
-          "explanation": "先看初始要点，再跟随新增的说明与图形，强调这些变化都发生在同一张 PPT 内。"
+          "explanation": "模拟课堂支持具有动画效果的 PPT，能够按动画顺序进行页内分步展示。"
         }
       ],
       "notice": "",
@@ -259,7 +259,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/teacher-script.jpg",
           "duration": 20.71,
           "sourceFile": "教师讲稿修改.mp4",
-          "explanation": "教师在讲稿编辑区修改内容，再回到课堂使用。这里作为讲稿维护的操作补充，与第 20 项共用同一份素材。"
+          "explanation": "教师可以修改课件对应的讲稿内容，为后续课堂讲解提供教学材料。"
         }
       ],
       "notice": "",
@@ -337,7 +337,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/archive.jpg",
           "duration": 10.38,
           "sourceFile": "课堂导入.mp4",
-          "explanation": "在数据结构课堂里填写笔记内容，选择笔记本并保存，再进入学习笔记查看记录。"
+          "explanation": "用户可以在课堂中记录和编辑笔记，选择目标笔记本进行归档，并在学习笔记中继续查看和整理。"
         }
       ],
       "notice": "",
@@ -365,7 +365,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/binary.jpg",
           "duration": 11.83,
           "sourceFile": "二分demo.mp4",
-          "explanation": "观察目标值、中点与左右边界的变化，解释为什么下一轮只保留一半区间。"
+          "explanation": "用户可以直接使用 AI 生成 Demo 并进行测试，也可以自行上传 Demo，借助交互演示加深对知识的理解。"
         },
         {
           "kind": "video",
@@ -375,7 +375,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/bubble.jpg",
           "duration": 16.25,
           "sourceFile": "冒泡demo.mp4",
-          "explanation": "指向正在比较的相邻元素，跟随交换与轮次变化，解释有序区间如何逐渐扩大。"
+          "explanation": "用户可以直接使用 AI 生成 Demo 并进行测试，也可以自行上传 Demo，借助交互演示加深对知识的理解。"
         },
         {
           "kind": "video",
@@ -385,7 +385,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/tcp.jpg",
           "duration": 14.62,
           "sourceFile": "tcpdemo.mp4",
-          "explanation": "演示拥塞窗口 cwnd 随 RTT 轮次变化，结合慢启动阈值说明指数增长与线性增长的区别。"
+          "explanation": "用户可以直接使用 AI 生成 Demo 并进行测试，也可以自行上传 Demo，借助交互演示加深对知识的理解。"
         }
       ],
       "notice": "",
@@ -413,7 +413,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/scripts.jpg",
           "duration": 55.17,
           "sourceFile": "多讲稿使用和切换.mp4",
-          "explanation": "以“常见 CNN 网络”课件为例，展示讲解区域、讲稿选择与个人讲稿编辑窗口，说明三种方式如何在课堂中结合。"
+          "explanation": "模拟课堂支持教师发布的预制讲稿、AI 实时讲解以及个人生成的个性化讲稿，用户可以分别选择这些方式进行课程学习。"
         }
       ],
       "notice": "",
@@ -441,7 +441,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/interrupt.jpg",
           "duration": 42.96,
           "sourceFile": "打断接续和流式对话.mp4",
-          "explanation": "以 CSMA 比较页面为例，解释“为什么这里需要确认”的追问如何插入讲解，再观察流式回答和接续。"
+          "explanation": "课堂对话支持中途打断，回答问题后可以从原来的位置继续讲解。"
         }
       ],
       "notice": "",
@@ -507,7 +507,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/autopage.jpg",
           "duration": 63.42,
           "sourceFile": "自动翻页.mp4",
-          "explanation": "观察从“集线器”到“交换机”的页面变化，说明自动推进与手动控制可以按学习需要切换。"
+          "explanation": "用户可以根据学习需要选择自动翻页，让课堂随讲解进度连续推进。"
         }
       ],
       "notice": "",
@@ -535,7 +535,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/jump.jpg",
           "duration": 12.33,
           "sourceFile": "第十六个.mp4",
-          "explanation": "跟随数据结构课件在不同页面之间切换，指出页码和讲解内容的变化；展示时可打开声音核对跟随。"
+          "explanation": "模拟课堂的语音讲解可以实时跟随 PPT 页码切换，调整为当前页面的讲解内容。"
         }
       ],
       "notice": "",
@@ -563,7 +563,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/generate.jpg",
           "duration": 76.29,
           "sourceFile": "demo生成以及实时多轮问答.mp4",
-          "explanation": "以流水线技术页面为起点，展示问答输出与工具生成过程，最后查看课堂中打开的流水线演示。"
+          "explanation": "用户可以围绕当前课件进行实时多轮问答，并使用 AI 生成可交互的 Demo，将知识讲解与演示结合起来。"
         }
       ],
       "notice": "",
@@ -591,7 +591,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/publish.jpg",
           "duration": 49.92,
           "sourceFile": "教师发布课程.mp4",
-          "explanation": "从创建课程到选择课件上传，再查看课程资源列表，解释教师供给材料、学生接收使用的流程。"
+          "explanation": "教师可以创建课程、上传课件，供学生接收、下载并用于课堂学习。"
         },
         {
           "kind": "video",
@@ -601,7 +601,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/teacher-script.jpg",
           "duration": 20.71,
           "sourceFile": "教师讲稿修改.mp4",
-          "explanation": "教师在课件旁修改教学讲稿，维护后续讲解使用的内容。"
+          "explanation": "教师可以修改和维护课件对应的讲稿，为学生提供配套的课堂讲解内容。"
         }
       ],
       "notice": "",
@@ -738,7 +738,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/write.jpg",
           "duration": 7.92,
           "sourceFile": "自己写.mp4",
-          "explanation": "在笔记本中展开编辑区域并修改内容，说明笔记支持继续维护，而不是一次性保存。"
+          "explanation": "用户可以在学习笔记中自行记录、修改并保存笔记，按照自己的理解整理学习内容。"
         }
       ],
       "notice": "",
@@ -766,7 +766,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/archive.jpg",
           "duration": 10.38,
           "sourceFile": "课堂导入.mp4",
-          "explanation": "数据结构课堂中输入笔记，选择笔记本后保存，再打开学习笔记查看，完成从课堂到个人空间的流转。"
+          "explanation": "用户可以在模拟课堂中记录笔记，并归档到指定笔记本，在学习笔记中继续查看和编辑。"
         }
       ],
       "notice": "",
@@ -794,7 +794,7 @@ window.LEARNING_SHOWCASE = {
           "poster": "recordings/archive.jpg",
           "duration": 10.38,
           "sourceFile": "课堂保存.mp4",
-          "explanation": "按飞书第 18-C 项保留此引用素材。经核对，它与“课堂导入.mp4”完全相同，画面呈现课堂归档，未展示从对话回答保存的独立过程。"
+          "explanation": "用户可以将对话中的重要内容保存为学习笔记，归档到指定笔记本，便于后续查看和复习。"
         }
       ],
       "notice": "素材核对：课堂保存.mp4 与课堂导入.mp4 的 SHA-256 完全一致，当前视频只能说明课堂笔记归档，不能作为“从对话保存”的独立演示。",
