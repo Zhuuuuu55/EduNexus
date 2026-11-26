@@ -1,0 +1,140 @@
+{
+  "interruption": {
+    "title": "中断、回答与恢复是一组受约束的状态转换",
+    "image": "classroom-interruption.svg",
+    "label": "流式对话 / 中断与接续",
+    "source": "ClassroomLauncherWorkspace.tsx · holdLectureForQuestion / resumeAfterQuestion / continueCourse",
+    "details": [
+      [
+        "保存可恢复的上下文",
+        "questionResume = { page, step, completed, previousResponse }",
+        "提问时先停用当前实时讲稿，再保存页码、动画步骤及完成状态；课程播放器 suspend，回答使用当前问题的上下文。"
+      ],
+      [
+        "继续前先核对当前课堂",
+        "currentPage === pending.page；教学仍处于 started 状态",
+        "继续按钮会停止 HTTP 问答、取消旧输出并结束回答状态。只有当前页及步骤仍匹配时，才尝试恢复原有播放。"
+      ],
+      [
+        "恢复失败也有明确路径",
+        "resume() → guideRequest / paused 检查 → advance 或 queue",
+        "如果播放器能恢复就复用位置；否则依据页面是否完成、当前教学模式和讲稿类型重新调度，不能一概宣称永远无缝恢复同一句。"
+      ]
+    ]
+  },
+  "page": {
+    "title": "页面准备和讲解完成，共同决定下一步动作",
+    "image": "classroom-page-gate.svg",
+    "label": "课件展示 / 页面与步骤控制",
+    "source": "ClassroomLauncherWorkspace.tsx · navigate / advanceTeaching",
+    "details": [
+      [
+        "教学依据先更新，再等待显示",
+        "POST pageContext(artifactId, { page, scriptId })",
+        "请求响应提供页面文本及讲稿，等待目标页画布 displayed 后才完成导航；旧导航被替换或暂停时取消，超时上限为 45 秒。"
+      ],
+      [
+        "推进必须通过状态门",
+        "!paused && pageComplete && previewReady && !questionResume",
+        "动画元数据仍在准备时不推进；画布未准备好或问题回答未结束时，也不能直接进入下一页。"
+      ],
+      [
+        "优先推进当前页动画",
+        "step < stepCount − 1 ? nextStep : nextSlide",
+        "页内步骤由 changeBuildStep 更新；该页所有步骤结束后，再切换下一页。课件最后一页完成时停止教学并提示已讲完。"
+      ]
+    ]
+  },
+  "sandbox": {
+    "title": "可运行的教学 Demo，使用浏览器隔离边界",
+    "image": "classroom-demo-boundary.svg",
+    "label": "交互演示 / 运行与安全边界",
+    "source": "ClassroomAssets.tsx · HTML srcDoc / sandbox / Content-Security-Policy",
+    "details": [
+      [
+        "脚本运行在独立 iframe",
+        "sandbox=\"allow-scripts\"；不设置 allow-same-origin",
+        "Demo 可以在自己的页面内执行脚本；不授予与课堂页面相同的来源权限，避免直接操作宿主课堂。"
+      ],
+      [
+        "CSP 限定内容能力",
+        "connect-src none；form-action none；base-uri none",
+        "脚本与样式限定为内联；图片限定 data / blob，字体限定 data。当前实现不向 Demo 开放任意外部网络连接或表单提交。"
+      ],
+      [
+        "可运行不等于教学正确",
+        "状态变化 / 输入边界 / 最终结果分别核对",
+        "二分、冒泡和 TCP 使用不同的中间状态解释过程。资源隔离解决运行边界；算法含义与结果仍由演示检查确认。"
+      ]
+    ]
+  },
+  "resource": {
+    "title": "课程、课件与讲稿形成可维护的资源关系",
+    "image": "classroom-resource-lanes.svg",
+    "label": "资源流转 / 角色与教学材料",
+    "source": "ClassroomAssets.tsx；课堂资源路由与第 07 / 20 项演示材料",
+    "details": [
+      [
+        "原件与教学衍生资源分开",
+        "课程 → 课件；课件 → script / demo",
+        "下载原始课件与课堂中选择讲稿、演示是不同入口。后续修改讲法不需要改写课程原始材料。"
+      ],
+      [
+        "教师维护与学生使用分工",
+        "发布 / 上传 / 修改 ↔ 接收 / 下载 / 开始课堂",
+        "角色权限决定操作入口；界面演示与接口权限检查需要分别确认。学生接收与教师 Demo 发布的新增素材按用户要求保留原文入口。"
+      ],
+      [
+        "同一材料适配多种讲法",
+        "预制讲稿 / 个人讲稿 / AI 实时讲解",
+        "讲稿选择通过 scriptId 参与当前页上下文生成。这样材料定位与讲法选择能够分别管理，又能在课堂中衔接。"
+      ]
+    ]
+  },
+  "record": {
+    "title": "一条笔记同时包含内容、归属和来源",
+    "image": "notes-record-anatomy.svg",
+    "label": "学习笔记 / 内容结构与追溯",
+    "source": "learning.ts · NotebookNote / classroomPostSessionDetails / sourceMap",
+    "details": [
+      [
+        "三个入口共享笔记本组织",
+        "手动编辑 / 课堂归档 / 对话产物保存",
+        "最近笔记提供快速返回，书架按课程和主题组织，笔记本内再按条目浏览与编辑。它们是同一记录集合的不同入口。"
+      ],
+      [
+        "正文之外保留来源线索",
+        "notebookId；artifactId?；noteType；sourceMap.refs",
+        "有来源产物时关联产物和引用；课堂总结还可关联 classroom_event。手写记录没有来源产物时，不强制补造引用。"
+      ],
+      [
+        "归档后继续使用",
+        "编辑正文 → 保存更新 → 再读取条目",
+        "记录需要可再次进入并补充内容。演示中“已输入”和“已保存”要区分，持久化应以关闭重开后读取的结果验证。"
+      ]
+    ]
+  },
+  "save": {
+    "title": "保存接口先校验访问，再处理来源与重复记录",
+    "image": "notes-save-protocol.svg",
+    "label": "学习笔记 / 保存协议与访问控制",
+    "source": "apps/api/src/routes/registrars/learning.ts · 笔记保存接口",
+    "details": [
+      [
+        "目标笔记本必须属于可访问范围",
+        "notebookForCurrentUser → notebookPayloadScopeMismatch",
+        "先确定当前用户可访问目标笔记本，再检查课程与载荷范围，避免内容写入错误的课程或个人空间。"
+      ],
+      [
+        "来源产物存在且允许保存",
+        "getAgentArtifact → canSaveArtifactToNotebook",
+        "带 artifactId 的请求先查产物是否存在；不存在返回 404，无权保存返回 403。不能只靠前端隐藏按钮来代替后端判断。"
+      ],
+      [
+        "同本同来源先查已有记录",
+        "notebookId + artifactId + deletedAt IS NULL",
+        "有来源产物时先检查当前笔记本的现有记录；课堂总结可进一步补齐类型与来源信息。手写记录不按正文相似度自动合并。"
+      ]
+    ]
+  }
+}
