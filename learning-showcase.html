@@ -24,16 +24,33 @@
 <h1>把一堂课，<br>变成可以继续的学习。</h1>
 <p>从课件出发，在讲解中提问、观察和验证；<br class="ls-wide">把当下的理解留下来，整理成自己的学习笔记。</p>
 <div class="ls-hero-actions"><a class="ls-button primary" href="#classroom">进入课堂演示 <span>↓</span></a><a class="ls-button" href="#notes">查看学习笔记 <span>↗</span></a></div>
+<div class="ls-total-coverage"><span><b>22</b> 独立展示条目</span><span><b>23</b> 原始截图</span><span><b>14</b> 不同实录视频</span><a href="assets/learning-showcase/coverage.md" target="_blank" rel="noopener">素材对应清单 ↗</a></div>
 <div class="ls-journey" aria-label="学习路径"><span><b>01</b> 课件与材料</span><i>→</i><span><b>02</b> 讲解与探索</span><i>→</i><span><b>03</b> 记录与归档</span><i>→</i><span><b>04</b> 回看与理解</span></div>
 </section>
 <section id="classroom" class="ls-feature">
 <div class="wrap">
 <header class="ls-section-head"><div><span class="ls-eyebrow">01 / AI CLASSROOM</span><h2>AI 模拟课堂</h2></div><p>让课件从静态材料，<br>变成可以提问、分步观察和交互的学习现场。</p></header>
-<div class="ls-stage" data-feature="classroom">
-<div class="ls-stage-top"><span class="ls-kicker">功能演示</span><div class="ls-mode" role="tablist" aria-label="课堂媒体类型"><button role="tab" id="classroom-video-tab" aria-selected="true" aria-controls="classroom-video-panel" data-mode="video">视频演示</button><button role="tab" id="classroom-image-tab" aria-selected="false" aria-controls="classroom-image-panel" tabindex="-1" data-mode="image">图片展示</button></div></div>
-<div id="classroom-video-panel" role="tabpanel" aria-labelledby="classroom-video-tab" class="ls-video-panel"><div class="ls-demo-tabs" role="tablist" aria-label="课堂演示主题"></div><div class="ls-demo-layout"><div class="ls-player"><video controls playsinline preload="none" aria-label="课堂演示视频"></video><div class="ls-player-caption"><span class="ls-media-tag">平台实录</span><span data-field="mediaCaption"></span><span data-field="duration"></span></div><p class="ls-load-error" hidden>视频暂时无法读取，请保留 HTML 旁的 assets 文件夹，或通过本地预览打开。</p></div><aside class="ls-explanation" aria-live="polite"><span class="ls-kicker" data-field="case"></span><h3 data-field="title"></h3><p class="ls-subtitle" data-field="subtitle"></p><ol data-field="steps"></ol><div class="ls-point"><span>为什么这样设计</span><p data-field="meaning"></p></div><details><summary>演示观察点与证据范围</summary><p data-field="observe"></p></details><a class="ls-source" data-field="source" target="_blank" rel="noopener">对应测试记录 ↗</a></aside></div></div>
-<div id="classroom-image-panel" role="tabpanel" aria-labelledby="classroom-image-tab" class="ls-image-panel" hidden><p class="ls-gallery-intro">图片呈现页面布局与关键状态；完整的操作过程见视频演示。点击图片可放大。</p><div class="ls-gallery"></div></div>
+<div class="ls-stage ls-stage-complete" data-feature="classroom">
+<div class="ls-stage-top"><div><span class="ls-kicker">功能演示 · 16 个独立条目</span><p class="ls-stage-hint">按编号选择功能，再切换对应的视频或图片。</p></div><button type="button" class="ls-export-notes">导出讲解文字 ↗</button></div>
+<div class="ls-case-nav" role="tablist" aria-label="课堂功能目录"></div>
+<div class="ls-case-content" id="classroom-case-content" role="tabpanel">
+<div class="ls-case-heading"><div><span class="ls-kicker" data-field="case"></span><h3 data-field="title"></h3></div><span class="ls-evidence-count" data-field="evidence"></span></div>
+<p class="ls-case-summary" data-field="summary"></p>
+<div class="ls-mode-row"><div class="ls-mode" role="tablist" aria-label="课堂媒体类型"><button role="tab" type="button" id="classroom-video-tab" aria-selected="true" aria-controls="classroom-video-panel" data-mode="video">视频演示 <span data-count="video"></span></button><button role="tab" type="button" id="classroom-image-tab" aria-selected="false" aria-controls="classroom-image-panel" tabindex="-1" data-mode="image">图片展示 <span data-count="image"></span></button></div><span class="ls-mode-tip">每份素材均配有旁侧讲解</span></div>
+<div class="ls-demo-layout">
+<div class="ls-media-column">
+<div class="ls-media-switcher" role="tablist" aria-label="课堂当前素材"></div>
+<div id="classroom-video-panel" role="tabpanel" aria-labelledby="classroom-video-tab" class="ls-video-panel"><video controls playsinline preload="none" aria-label="课堂演示视频"></video></div>
+<div id="classroom-image-panel" role="tabpanel" aria-labelledby="classroom-image-tab" class="ls-image-panel" hidden><button type="button" class="ls-main-image" aria-label="放大当前图片"><img alt=""><span>点击放大 ↗</span></button><div class="ls-image-thumbs" aria-label="课堂截图缩略图"></div></div>
+<div class="ls-player-caption"><span class="ls-media-tag" data-field="mediaType"></span><span data-field="mediaTitle"></span><span data-field="duration"></span></div>
+<p class="ls-load-error" hidden>素材暂时无法读取，请保留 HTML 旁完整的 assets 文件夹。</p>
+<div class="ls-material-note" data-field="notice" hidden></div>
+<div class="ls-missing-list" hidden><strong>待补充的独立素材</strong><ul></ul></div>
 </div>
+<aside class="ls-explanation" aria-live="polite"><span class="ls-kicker">这一段怎么讲</span><h4 data-field="clipTitle"></h4><p class="ls-clip-explanation" data-field="clipExplanation"></p><div class="ls-speaking-points"><span>讲解要点</span><ol data-field="steps"></ol></div><div class="ls-point"><span>设计与学习价值</span><p data-field="meaning"></p></div>
+<div class="ls-narration"><label for="classroom-narration">我的讲解补充 <small>可直接填写</small></label><textarea id="classroom-narration" rows="5" placeholder="在这里补充这段视频或图片的讲解词、演示顺序、注意事项……" spellcheck="false"></textarea><p class="ls-save-state" role="status">补充文字按条目和素材保存在当前浏览器，也可导出。</p></div>
+<a class="ls-source" data-field="source" target="_blank" rel="noopener">对应飞书测试记录 ↗</a></aside>
+</div></div></div>
 <div class="ls-tech-heading"><span class="ls-eyebrow">BEHIND THE EXPERIENCE</span><h3>一堂课的核心，是共享同一个教学上下文。</h3><p>把“当前讲什么、讲到哪里、学生在问什么”连接起来，让页面、讲稿与交互围绕同一份材料协同。</p></div>
 <figure class="ls-blueprint"><div class="ls-figure-label"><span>FIG. A</span><strong>以课件页为中心的教学闭环</strong><small>实现机制示意</small></div>
 <svg class="ls-diagram" viewBox="0 0 1000 410" role="img" aria-labelledby="classroom-diagram-title classroom-diagram-desc"><title id="classroom-diagram-title">课件、页面上下文、讲解与交互之间的协作流程</title><desc id="classroom-diagram-desc">教学材料进入页面上下文，上下文向讲稿、实时问答和交互演示提供共同依据。翻页与打断反馈到上下文，课堂笔记进入个人笔记本。</desc><defs><marker id="arrow-a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#0B9E88" stroke-width="1.5"/></marker></defs>
@@ -48,31 +65,49 @@
 <text x="20" y="390" class="svg-label">PAGE-GROUNDED TEACHING</text><text x="982" y="390" text-anchor="end" class="svg-small">统一依据 → 动态交互 → 学习留存</text></svg>
 <figcaption>图 A · 页级上下文是讲解与交互的连接点。此图说明模块关系，不表示所有异步行为已经完成线上验收。</figcaption></figure>
 <div class="ls-technical-cards"><article><span>01 / 教学依据</span><h4>多种讲稿，共用课件页</h4><p>预制讲稿提供稳定的教学组织，个人讲稿承载适配内容。页面上下文请求携带页码与讲稿标识，讲解与追问可以围绕当前页展开。</p><div class="ls-benefit">作用：保留好的讲法，也允许个人调整。</div></article><article><span>02 / 状态协调</span><h4>翻页、分步与打断相互协调</h4><p>当前页、页内步骤和播放完成状态共同影响推进；提问时保留恢复位置。切换页面时需要终止旧输出，再接续新的教学内容。</p><div class="ls-benefit">作用：让学习者能够改变节奏。</div></article><article><span>03 / 可操作表达</span><h4>把算法变成可观察的过程</h4><p>二分与冒泡示例分别突出区间变化和局部交换。HTML Demo 在受限 iframe 中运行，与课堂页面隔离；演示内容与课堂材料可以一起组织。</p><div class="ls-benefit">作用：用中间状态解释算法，而不只给结论。</div></article></div>
-<div class="ls-thesis"><span>设计亮点</span><h3>从“问一个 AI”，走向“围绕一份材料学习”。</h3><p>页面是共同依据，讲稿决定组织方式，实时交互补足理解，笔记把学习结果留下来。四者连接起来，课堂才有连续性。</p></div>
+<div class="ls-thesis"><span>设计亮点</span><h3>围绕一份材料，建立连续的学习过程。</h3><p>页面是共同依据，讲稿决定组织方式，实时交互补足理解，笔记把学习结果留下来。四者连接起来，课堂才有连续性。</p></div>
 <details class="ls-coverage"><summary>查看课堂功能覆盖与补充材料 <span>原文记录 ↗</span></summary><div class="ls-coverage-grid"><a href="https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe" target="_blank" rel="noopener"><b>材料与显示 / 01–06</b><p>最近打开、书架、下载、多格式、缩放全屏、AI 与手动标注、PPT 页内分步。</p></a><a href="https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcntmTHrHw4tKnf1eCibZn2wd" target="_blank" rel="noopener"><b>讲稿与教学 / 07–16</b><p>讲稿管理、预制 / 实时 / 个人讲解、打断接续、风格选择、自动翻页、目录与语音。</p></a><a href="https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnHjelQXwxbPOjI1YDEjnqDh" target="_blank" rel="noopener"><b>资源与协作 / 19–20</b><p>Demo 生成与流式多轮问答、教师发布材料、学生接收与导入；完整过程以原始录屏为准。</p></a></div></details>
 </div></section>
 <section id="notes" class="ls-feature ls-notes"><div class="wrap">
 <header class="ls-section-head"><div><span class="ls-eyebrow">02 / LEARNING NOTES</span><h2>学习笔记</h2></div><p>把一次讲解、一次追问和自己的思考，<br>整理为可以保存、回看和继续编辑的学习内容。</p></header>
-<div class="ls-stage" data-feature="notes"><div class="ls-stage-top"><span class="ls-kicker">功能演示</span><div class="ls-mode" role="tablist" aria-label="笔记媒体类型"><button role="tab" id="notes-video-tab" aria-selected="true" aria-controls="notes-video-panel" data-mode="video">视频演示</button><button role="tab" id="notes-image-tab" aria-selected="false" aria-controls="notes-image-panel" tabindex="-1" data-mode="image">图片展示</button></div></div>
-<div id="notes-video-panel" role="tabpanel" aria-labelledby="notes-video-tab" class="ls-video-panel"><div class="ls-demo-tabs" role="tablist" aria-label="笔记演示主题"></div><div class="ls-demo-layout"><div class="ls-player"><video controls playsinline preload="none" aria-label="笔记演示视频"></video><div class="ls-player-caption"><span class="ls-media-tag">平台实录</span><span data-field="mediaCaption"></span><span data-field="duration"></span></div><p class="ls-load-error" hidden>视频暂时无法读取，请保留 HTML 旁的 assets 文件夹，或通过本地预览打开。</p></div><aside class="ls-explanation" aria-live="polite"><span class="ls-kicker" data-field="case"></span><h3 data-field="title"></h3><p class="ls-subtitle" data-field="subtitle"></p><ol data-field="steps"></ol><div class="ls-point"><span>为什么这样设计</span><p data-field="meaning"></p></div><details><summary>演示观察点与证据范围</summary><p data-field="observe"></p></details><a class="ls-source" data-field="source" target="_blank" rel="noopener">对应测试记录 ↗</a></aside></div></div>
-<div id="notes-image-panel" role="tabpanel" aria-labelledby="notes-image-tab" class="ls-image-panel" hidden><p class="ls-gallery-intro">从真实操作中提取界面帧，把“在哪里记录”与“如何归档”分开讲清楚。点击图片可放大。</p><div class="ls-gallery"></div></div></div>
+<div class="ls-stage ls-stage-complete" data-feature="notes">
+<div class="ls-stage-top"><div><span class="ls-kicker">功能演示 · 6 个独立条目</span><p class="ls-stage-hint">按编号选择功能，再切换对应的视频或图片。</p></div><button type="button" class="ls-export-notes">导出讲解文字 ↗</button></div>
+<div class="ls-case-nav" role="tablist" aria-label="笔记功能目录"></div>
+<div class="ls-case-content" id="notes-case-content" role="tabpanel">
+<div class="ls-case-heading"><div><span class="ls-kicker" data-field="case"></span><h3 data-field="title"></h3></div><span class="ls-evidence-count" data-field="evidence"></span></div>
+<p class="ls-case-summary" data-field="summary"></p>
+<div class="ls-mode-row"><div class="ls-mode" role="tablist" aria-label="笔记媒体类型"><button role="tab" type="button" id="notes-video-tab" aria-selected="true" aria-controls="notes-video-panel" data-mode="video">视频演示 <span data-count="video"></span></button><button role="tab" type="button" id="notes-image-tab" aria-selected="false" aria-controls="notes-image-panel" tabindex="-1" data-mode="image">图片展示 <span data-count="image"></span></button></div><span class="ls-mode-tip">每份素材均配有旁侧讲解</span></div>
+<div class="ls-demo-layout">
+<div class="ls-media-column">
+<div class="ls-media-switcher" role="tablist" aria-label="笔记当前素材"></div>
+<div id="notes-video-panel" role="tabpanel" aria-labelledby="notes-video-tab" class="ls-video-panel"><video controls playsinline preload="none" aria-label="笔记演示视频"></video></div>
+<div id="notes-image-panel" role="tabpanel" aria-labelledby="notes-image-tab" class="ls-image-panel" hidden><button type="button" class="ls-main-image" aria-label="放大当前图片"><img alt=""><span>点击放大 ↗</span></button><div class="ls-image-thumbs" aria-label="笔记截图缩略图"></div></div>
+<div class="ls-player-caption"><span class="ls-media-tag" data-field="mediaType"></span><span data-field="mediaTitle"></span><span data-field="duration"></span></div>
+<p class="ls-load-error" hidden>素材暂时无法读取，请保留 HTML 旁完整的 assets 文件夹。</p>
+<div class="ls-material-note" data-field="notice" hidden></div>
+<div class="ls-missing-list" hidden><strong>待补充的独立素材</strong><ul></ul></div>
+</div>
+<aside class="ls-explanation" aria-live="polite"><span class="ls-kicker">这一段怎么讲</span><h4 data-field="clipTitle"></h4><p class="ls-clip-explanation" data-field="clipExplanation"></p><div class="ls-speaking-points"><span>讲解要点</span><ol data-field="steps"></ol></div><div class="ls-point"><span>设计与学习价值</span><p data-field="meaning"></p></div>
+<div class="ls-narration"><label for="notes-narration">我的讲解补充 <small>可直接填写</small></label><textarea id="notes-narration" rows="5" placeholder="在这里补充这段视频或图片的讲解词、演示顺序、注意事项……" spellcheck="false"></textarea><p class="ls-save-state" role="status">补充文字按条目和素材保存在当前浏览器，也可导出。</p></div>
+<a class="ls-source" data-field="source" target="_blank" rel="noopener">对应飞书测试记录 ↗</a></aside>
+</div></div></div>
 <div class="ls-tech-heading"><span class="ls-eyebrow">BEHIND THE EXPERIENCE</span><h3>多个学习入口，汇入同一个个人空间。</h3><p>把内容的来源、归属与后续编辑分开处理，让课堂里的临时记录有机会成为可持续积累的知识。</p></div>
 <figure class="ls-blueprint"><div class="ls-figure-label"><span>FIG. B</span><strong>从学习现场到个人笔记本</strong><small>内容流转示意</small></div>
-<svg class="ls-diagram" viewBox="0 0 1000 350" role="img" aria-labelledby="notes-diagram-title notes-diagram-desc"><title id="notes-diagram-title">手动记录、课堂笔记和对话内容进入个人笔记本的过程</title><desc id="notes-diagram-desc">三种学习内容来源，经过整理与归档进入当前用户的目标笔记本，然后继续编辑和回看。对话保存场景的原始演示通过飞书文档补充。</desc><defs><marker id="arrow-b" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#0B9E88" stroke-width="1.5"/></marker></defs>
+<svg class="ls-diagram" viewBox="0 0 1000 350" role="img" aria-labelledby="notes-diagram-title notes-diagram-desc"><title id="notes-diagram-title">手动记录、课堂笔记和对话内容进入个人笔记本的过程</title><desc id="notes-diagram-desc">三种学习内容来源，经过整理与归档进入当前用户的目标笔记本，然后继续编辑和回看。对话保存场景保留原文引用视频，并注明重复素材与待补录内容。</desc><defs><marker id="arrow-b" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#0B9E88" stroke-width="1.5"/></marker></defs>
 <rect x="20" y="30" width="215" height="65" rx="14" class="svg-white"/><text x="43" y="58" class="svg-title">自己写的笔记</text><text x="43" y="81" class="svg-small">思考 · 要点 · 待解决的问题</text>
 <rect x="20" y="118" width="215" height="65" rx="14" class="svg-white"/><text x="43" y="146" class="svg-title">课堂中的记录</text><text x="43" y="169" class="svg-small">边看课件 · 边整理理解</text>
-<rect x="20" y="206" width="215" height="65" rx="14" class="svg-white"/><text x="43" y="234" class="svg-title">对话中留下的内容</text><text x="43" y="257" class="svg-small">原始演示见测试文档</text>
+<rect x="20" y="206" width="215" height="65" rx="14" class="svg-white"/><text x="43" y="234" class="svg-title">对话中留下的内容</text><text x="43" y="257" class="svg-small">对话保存的独立素材待补</text>
 <path d="M237 62H277V150H320M237 150H320M237 238H277V150" class="svg-arrow" marker-end="url(#arrow-b)"/>
 <rect x="326" y="70" width="235" height="160" rx="18" class="diagram-fill"/><text x="350" y="105" class="svg-label">ORGANIZE / 整理归档</text><text x="350" y="145" class="svg-title">内容 + 来源线索</text><text x="350" y="175" class="svg-small">选择目标笔记本</text><text x="350" y="201" class="svg-small">确认保存结果</text>
 <path d="M563 150H622" class="svg-arrow" marker-end="url(#arrow-b)"/><rect x="628" y="30" width="350" height="241" rx="18" fill="#087A6A"/><text x="653" y="65" class="svg-label" fill="#BCE8DE">PERSONAL / 个人学习空间</text><text x="653" y="105" class="svg-title" fill="white">我的笔记本</text><path d="M653 126H952" stroke="#56A99B"/><rect x="652" y="146" width="140" height="48" rx="9" fill="#218C7B"/><rect x="811" y="146" width="140" height="48" rx="9" fill="#218C7B"/><text x="722" y="176" class="svg-body" fill="white" text-anchor="middle">继续编辑</text><text x="881" y="176" class="svg-body" fill="white" text-anchor="middle">重新回看</text><text x="653" y="238" class="svg-small" fill="#C6E9E1">按当前用户校验目标笔记本与保存权限</text>
 <text x="22" y="325" class="svg-label">LEARNING → ORGANIZING → REVISITING</text><text x="977" y="325" text-anchor="end" class="svg-small">让记录成为后续学习的起点</text></svg>
-<figcaption>图 B · 三种记录场景的共同归宿是个人笔记本。对话保存场景通过原测试文档补充展示。</figcaption></figure>
+<figcaption>图 B · 三种记录场景汇入个人笔记本。第 18-C 项已保留原文引用视频，并标明重复素材与待补录内容。</figcaption></figure>
 <div class="ls-technical-cards"><article><span>01 / 内容组织</span><h4>入口不同，归档目标一致</h4><p>自己记录、课堂整理和对话保存对应不同学习时刻。用笔记本组织内容，让材料围绕课程与主题逐渐积累。</p><div class="ls-benefit">作用：减少有价值内容散落在临时窗口中。</div></article><article><span>02 / 保存与归属</span><h4>把个人空间的边界做清楚</h4><p>后端笔记相关接口校验当前用户的笔记本访问权，并检查内容能否保存到目标笔记本。界面提示需要与实际保存结果对应。</p><div class="ls-benefit">作用：让保存目标明确、归属可确认。</div></article><article><span>03 / 后续使用</span><h4>笔记保存后，还能继续生长</h4><p>笔记本书架承接整理后的内容，进入笔记本后继续查看与编辑。测试需要覆盖关闭后重开，确保输入、保存和重新读取构成完整过程。</p><div class="ls-benefit">作用：让一次记录连接下一次复习。</div></article></div>
-<div class="ls-thesis"><span>设计亮点</span><h3>课堂解决“现在理解”，笔记承接“以后还能用”。</h3><p>把讲解与留存连接起来，让学生既能跟着课堂走，也能在自己的笔记中重组知识。个人学习空间成为两次课堂之间的桥梁。</p></div>
-<div class="ls-note-sources"><h4>三种笔记场景，分别展示</h4><div><span><b>自己写笔记</b><small>本页视频：输入与保存</small></span><span><b>课堂内容归档</b><small>本页视频：随堂记录与归档</small></span><a href="https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnnmthW13IFrdIDNjBUhH3Gc" target="_blank" rel="noopener"><b>从对话保存 ↗</b><small>原文第 18C 项：独立演示</small></a></div></div>
+<div class="ls-thesis"><span>设计亮点</span><h3>课堂连接当下理解，笔记承接之后的复习。</h3><p>把讲解与留存连接起来，让学生既能跟着课堂走，也能在自己的笔记中重组知识。个人学习空间成为两次课堂之间的桥梁。</p></div>
+<div class="ls-note-sources"><h4>三种笔记场景，分别展示</h4><div><span><b>自己写笔记</b><small>第 18-A 项：修改与保存</small></span><span><b>课堂内容归档</b><small>第 18-B 项：课堂归档</small></span><a href="#case-n18c"><b>从对话保存 ↓</b><small>第 18-C 项：查看素材说明</small></a></div></div>
 </div></section>
 <section class="wrap ls-handoff"><span class="ls-eyebrow">ONE CONTINUOUS LEARNING EXPERIENCE</span><h2>材料、过程、理解，连成一条线。</h2><p>课堂提供共同的学习现场，交互帮助理解具体过程，笔记留下个人的思考。<br>这两个模块共同承接“从看见知识，到形成自己的知识”的学习路径。</p><a class="ls-button" href="https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe" target="_blank" rel="noopener">查看原始测试与演示材料 ↗</a></section>
 </main>
-<footer class="ls-footer"><div class="wrap"><strong>MAIR·EduNexus 智联教枢</strong><p>本页沿用 EduNexus 仓库的设计样式与字体。视频来自已有测试录屏，图片为录屏截帧；技术图为按本地实现整理的机制示意。素材用于功能说明，不代表全部功能已完成线上验收。数字人实际接入状态不在本页演示范围内。</p><a href="#">返回顶部 ↑</a></div></footer>
+<footer class="ls-footer"><div class="wrap"><strong>MAIR·EduNexus 智联教枢</strong><p>本页沿用 EduNexus 仓库的设计样式与字体。视频与原始截图均来自 Captures 素材文件夹；技术图为按本地实现整理的机制示意。素材用于功能说明，不代表全部功能已完成线上验收。数字人实际接入状态不在本页演示范围内。</p><a href="#">返回顶部 ↑</a></div></footer>
 <dialog class="ls-lightbox" aria-labelledby="lightbox-title"><button class="ls-close" type="button" aria-label="关闭放大图片">×</button><img alt=""><h3 id="lightbox-title"></h3><p></p></dialog>
 </body></html>

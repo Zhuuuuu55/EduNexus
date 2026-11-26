@@ -1,60 +1,88 @@
-/* Static, offline-compatible demos. Text and media are editable in content.js. */
+/* Repository-native, offline-compatible showcase. All feature/media mappings live in content.js. */
 (() => {
 'use strict';
-const data=window.LEARNING_SHOWCASE, media='assets/learning-showcase/media/';
-const lightbox=document.querySelector('.ls-lightbox');
-function openImage(image){
- document.querySelectorAll('video').forEach(v=>v.pause());
- lightbox.querySelector('img').src=media+image.id+'.jpg';
- lightbox.querySelector('img').alt=image.title;
- lightbox.querySelector('h3').textContent=image.title;
- lightbox.querySelector('p').textContent=image.caption;
- lightbox.showModal();
-}
+const data=window.LEARNING_SHOWCASE,base='assets/learning-showcase/',storageKey='edunexus-showcase-commentary-v2';
+let savedNotes={},storageAvailable=true;
+try{const stored=JSON.parse(localStorage.getItem(storageKey)||'{}');if(stored&&typeof stored==='object'&&!Array.isArray(stored))savedNotes=stored;}catch{storageAvailable=false;}
+const lightbox=document.querySelector('.ls-lightbox'),renderers=[];
+function pauseAll(){document.querySelectorAll('video').forEach(v=>v.pause());}
+function openImage(media){pauseAll();lightbox.querySelector('img').src=base+media.src;lightbox.querySelector('img').alt=media.title;lightbox.querySelector('h3').textContent=media.title;lightbox.querySelector('p').textContent=media.explanation;lightbox.showModal();}
 lightbox.querySelector('button').addEventListener('click',()=>lightbox.close());
-lightbox.addEventListener('click',e=>{if(e.target===lightbox){const r=lightbox.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)lightbox.close();}});
-// Only one recording should be audible at a time, including between the two modules.
+lightbox.addEventListener('click',e=>{if(e.target!==lightbox)return;const r=lightbox.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)lightbox.close();});
 document.querySelectorAll('video').forEach(v=>v.addEventListener('play',()=>document.querySelectorAll('video').forEach(other=>{if(other!==v)other.pause();})));
-const shortLabels={entry:'课件进入',builds:'页内分步',lecture:'讲稿与讲解',guide:'实时问答',binary:'二分查找',bubble:'冒泡排序',autopage:'自动翻页',jump:'目录定位',write:'自己写笔记',inote:'课堂内记录',archive:'归档到笔记本'};
-function bindTabKeys(list){
- list.addEventListener('keydown',e=>{
-  if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;
-  const tabs=[...list.querySelectorAll('[role=tab]')],current=tabs.indexOf(document.activeElement);
-  if(current<0)return;
-  e.preventDefault();let next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(current+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;
-  tabs[next].click();tabs[next].focus();
- });
+function noteKey(point,media){return point.id+'/'+media.kind+'/'+media.id;}
+function exportNotes(){
+ const text=['# 模拟课堂与学习笔记 · 演示讲解','',...['classroom','notes'].flatMap(name=>data[name].flatMap(point=>[
+  '## '+point.number+' '+point.title,'',point.summary,'','讲解要点：',...point.steps.map(t=>'- '+t),'','设计与学习价值：'+point.meaning,'',
+  ...point.media.flatMap(media=>['### '+media.title,'',media.explanation,'',...(savedNotes[noteKey(point,media)]?['我的补充：',savedNotes[noteKey(point,media)],'']:[])]),
+  ...(point.notice?['素材说明：'+point.notice,'']:[]),...(point.missing.length?['待补素材：'+point.missing.join('；'),'']:[]),'原测试记录：'+point.source,''
+ ]))].join('\n');
+ const url=URL.createObjectURL(new Blob(['\uFEFF'+text],{type:'text/markdown;charset=utf-8'})),a=document.createElement('a');a.href=url;a.download='模拟课堂与学习笔记-演示讲解.md';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
 }
+document.querySelectorAll('.ls-export-notes').forEach(b=>b.addEventListener('click',exportNotes));
+function bindTabKeys(list){list.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;const tabs=[...list.querySelectorAll('[role=tab]')].filter(t=>!t.disabled),i=tabs.indexOf(document.activeElement);if(i<0)return;e.preventDefault();const next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;tabs[next].click();tabs[next].focus();});}
+function setSelected(list,active){list.querySelectorAll('[role=tab]').forEach(b=>{b.setAttribute('aria-selected',String(b===active));b.tabIndex=b===active?0:-1;});}
 document.querySelectorAll('[data-feature]').forEach(stage=>{
- const name=stage.dataset.feature,items=data[name],video=stage.querySelector('video'),tabs=stage.querySelector('.ls-demo-tabs');
- const videoPanel=stage.querySelector('.ls-video-panel'),imagePanel=stage.querySelector('.ls-image-panel');
- const field=n=>stage.querySelector('[data-field="'+n+'"]');
- function select(i){
-  const item=items[i];video.pause();video.src=media+item.id+'.mp4';video.poster=media+item.id+'.jpg';video.load();
+ const name=stage.dataset.feature,points=data[name],nav=stage.querySelector('.ls-case-nav'),content=stage.querySelector('.ls-case-content'),video=stage.querySelector('video'),modes=stage.querySelector('.ls-mode'),switcher=stage.querySelector('.ls-media-switcher'),thumbs=stage.querySelector('.ls-image-thumbs'),textarea=stage.querySelector('textarea'),saveStatus=stage.querySelector('.ls-save-state');
+ const field=n=>stage.querySelector('[data-field="'+n+'"]');let currentPoint,activeMedia,mode='video';
+ function selectMedia(media){
+  video.pause();activeMedia=media;
+  field('mediaTitle').textContent=media.title;field('clipTitle').textContent=media.title;field('clipExplanation').textContent=media.explanation;
+  field('mediaType').textContent=media.kind==='video'?'视频实录':'原始截图';
   stage.querySelector('.ls-load-error').hidden=true;
-  tabs.querySelectorAll('button').forEach((b,j)=>{b.setAttribute('aria-selected',String(j===i));b.tabIndex=j===i?0:-1;});
-  videoPanel.setAttribute('aria-labelledby',name+'-demo-'+i);
-  field('case').textContent='测试记录 '+item.case;
-  ['title','subtitle','meaning','observe'].forEach(n=>field(n).textContent=item[n]);
-  field('steps').replaceChildren(...item.steps.map(text=>{const li=document.createElement('li');li.textContent=text;return li;}));
-  field('source').href=item.source;field('mediaCaption').textContent=shortLabels[item.id];field('duration').textContent='按需播放 · 可拖动进度';
+  switcher.querySelectorAll('button').forEach(b=>{b.setAttribute('aria-selected',String(b.dataset.media===media.id));b.tabIndex=b.dataset.media===media.id?0:-1;});
+  thumbs.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.media===media.id)));
+  if(media.kind==='video'){
+   video.src=base+media.src;video.poster=base+media.poster;video.load();const sec=Math.round(media.duration);field('duration').textContent=Math.floor(sec/60)+':'+String(sec%60).padStart(2,'0')+' · 可全屏';
+  }else{
+   video.removeAttribute('src');video.load();const img=stage.querySelector('.ls-main-image img');img.src=base+media.src;img.alt=media.title;
+   field('duration').textContent=media.width+' × '+media.height;
+  }
+  textarea.value=savedNotes[noteKey(currentPoint,media)]||'';
+  saveStatus.textContent=storageAvailable?'补充文字按当前素材自动保存；可导出完整讲解。':'浏览器存储不可用，请使用“导出讲解文字”保留补充。';
  }
- items.forEach((item,i)=>{const b=document.createElement('button');b.type='button';b.id=name+'-demo-'+i;b.setAttribute('role','tab');b.setAttribute('aria-controls',videoPanel.id);b.textContent=shortLabels[item.id];b.addEventListener('click',()=>select(i));tabs.append(b);});
- video.addEventListener('loadedmetadata',()=>{const t=Math.round(video.duration);field('duration').textContent=Math.floor(t/60)+':'+String(t%60).padStart(2,'0')+' · 按需播放';});
- video.addEventListener('error',()=>stage.querySelector('.ls-load-error').hidden=false);
- const modes=stage.querySelector('.ls-mode');
- modes.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{
-  const isVideo=b.dataset.mode==='video';video.pause();videoPanel.hidden=!isVideo;imagePanel.hidden=isVideo;
-  modes.querySelectorAll('button').forEach(t=>{t.setAttribute('aria-selected',String(t===b));t.tabIndex=t===b?0:-1;});
- }));
- data.images[name].forEach(image=>{
-  const card=document.createElement('article');card.className='ls-gallery-card';
-  const button=document.createElement('button');button.type='button';button.setAttribute('aria-label','放大：'+image.title);
-  const img=document.createElement('img');img.src=media+image.id+'.jpg';img.alt=image.title;img.loading='lazy';img.width=1280;img.height=720;button.append(img);button.addEventListener('click',()=>openImage(image));
-  const copy=document.createElement('div');copy.className='ls-gallery-copy';
-  const h=document.createElement('h4');h.textContent=image.title;const p=document.createElement('p');p.textContent=image.caption;
-  const a=document.createElement('a');a.href=image.source;a.target='_blank';a.rel='noopener';a.className='ls-source';a.textContent='原测试记录 '+image.case+' ↗';copy.append(h,p,a);card.append(button,copy);stage.querySelector('.ls-gallery').append(card);
+ function selectMode(kind){
+  if(!currentPoint.media.some(m=>m.kind===kind))return;mode=kind;pauseAll();
+  const media=currentPoint.media.filter(m=>m.kind===kind);
+  stage.querySelector('.ls-video-panel').hidden=kind!=='video';stage.querySelector('.ls-image-panel').hidden=kind!=='image';
+  setSelected(modes,modes.querySelector('[data-mode="'+kind+'"]'));switcher.replaceChildren();thumbs.replaceChildren();
+  media.forEach((m,i)=>{
+   if(kind==='video'){
+    const b=document.createElement('button');b.type='button';b.setAttribute('role','tab');b.setAttribute('aria-controls',name+'-video-panel');b.dataset.media=m.id;b.textContent=(i+1)+'. '+m.title;b.addEventListener('click',()=>selectMedia(m));switcher.append(b);
+   }else{
+    const b=document.createElement('button');b.type='button';b.dataset.media=m.id;b.setAttribute('aria-label','显示图片：'+m.title);b.setAttribute('aria-pressed','false');const img=document.createElement('img');img.src=base+m.src;img.alt='';img.loading='lazy';const span=document.createElement('span');span.textContent=(i+1)+'. '+m.title;b.append(img,span);b.addEventListener('click',()=>selectMedia(m));thumbs.append(b);
+   }
+  });
+  switcher.hidden=kind!=='video';selectMedia(media[0]);
+ }
+ function selectPoint(point,updateHash=false){
+  currentPoint=point;pauseAll();const button=nav.querySelector('[data-point="'+point.id+'"]');setSelected(nav,button);content.setAttribute('aria-labelledby',button.id);
+  field('case').textContent='测试展示 '+point.number+' / '+point.group;field('title').textContent=point.title;field('summary').textContent=point.summary;field('meaning').textContent=point.meaning;field('source').href=point.source;
+  field('steps').replaceChildren(...point.steps.map(t=>{const li=document.createElement('li');li.textContent=t;return li;}));
+  const counts={video:point.media.filter(m=>m.kind==='video').length,image:point.media.filter(m=>m.kind==='image').length};
+  field('evidence').textContent=[counts.video?counts.video+' 段视频':'',counts.image?counts.image+' 张图片':''].filter(Boolean).join(' · ');
+  modes.querySelectorAll('[data-mode]').forEach(b=>{const count=counts[b.dataset.mode];b.disabled=!count;b.querySelector('span').textContent=count;});
+  field('notice').textContent=point.notice;field('notice').hidden=!point.notice;
+  const missing=stage.querySelector('.ls-missing-list');missing.hidden=!point.missing.length;missing.querySelector('ul').replaceChildren(...point.missing.map(t=>{const li=document.createElement('li');li.textContent=t;return li;}));
+  selectMode(counts.video?'video':'image');
+  if(updateHash){try{history.replaceState(null,'','#case-'+point.id);}catch{}}
+ }
+ points.forEach(point=>{
+  const b=document.createElement('button');b.id='case-'+point.id;b.type='button';b.dataset.point=point.id;b.setAttribute('role','tab');b.setAttribute('aria-controls',content.id);
+  const number=document.createElement('span');number.className='ls-case-number';number.textContent=point.number;const label=document.createElement('strong');label.textContent=point.label;const badge=document.createElement('small');badge.textContent=point.media.some(m=>m.kind==='video')?'视频':'图片';if(point.notice){badge.textContent='素材待补';badge.className='ls-badge-warning';}
+  b.append(number,label,badge);b.addEventListener('click',()=>selectPoint(point,true));nav.append(b);
  });
- bindTabKeys(tabs);bindTabKeys(modes);select(0);
+ modes.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>selectMode(b.dataset.mode)));
+ stage.querySelector('.ls-main-image').addEventListener('click',()=>{if(activeMedia?.kind==='image')openImage(activeMedia);});
+ stage.querySelector('.ls-main-image img').addEventListener('error',()=>stage.querySelector('.ls-load-error').hidden=false);
+ video.addEventListener('error',()=>{if(activeMedia?.kind==='video'&&video.getAttribute('src'))stage.querySelector('.ls-load-error').hidden=false;});
+ textarea.addEventListener('input',()=>{
+  savedNotes[noteKey(currentPoint,activeMedia)]=textarea.value;
+  try{localStorage.setItem(storageKey,JSON.stringify(savedNotes));storageAvailable=true;saveStatus.textContent='已保存到当前浏览器 · 可导出讲解文字';}catch{storageAvailable=false;saveStatus.textContent='当前浏览器无法保存，请导出讲解文字。';}
+ });
+ bindTabKeys(nav);bindTabKeys(modes);bindTabKeys(switcher);
+ const fromHash=points.find(p=>'#case-'+p.id===location.hash);selectPoint(fromHash||points[0]);
+ renderers.push({points,selectPoint});
 });
+window.addEventListener('hashchange',()=>{for(const r of renderers){const point=r.points.find(p=>'#case-'+p.id===location.hash);if(point)r.selectPoint(point);}});
 })();

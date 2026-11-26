@@ -1,13 +1,30 @@
-# 模拟课堂与学习笔记展示模块
+# 模拟课堂与学习笔记完整展示
 
-入口：`learning-showcase.html`。沿用当前仓库首页的设计令牌、Noto 字体、导航、留白与卡片风格；`template-base.css` 为首页主样式的原样提取，模块扩展集中在 `showcase.css`。
+入口：`learning-showcase.html`。沿用 EduNexus 首页的字体、设计令牌和浅色墨绿主题，展示目录与讲解工作区做了适量扩展。
 
-本地预览：在仓库根目录执行 `python -m http.server 4173 --bind 127.0.0.1`，访问 `http://127.0.0.1:4173/learning-showcase.html`。也可直接双击 HTML；移动文件时需保留同目录的 assets。
+## 本地使用
 
-- 两个独立功能板块：`#classroom`、`#notes`。各自上方是可切换演示与旁侧讲解，下方是技术架构图、实现思路和设计亮点。
-- 视频与图片分别通过页签展示。切换演示停止旧视频；播放其他模块的视频时也暂停原视频。图片可点击放大。
-- 替换文字和素材对应关系：编辑 `assets/learning-showcase/content.js`。替换录屏：更新 `media/` 中同名 MP4 与 JPG。播放器不自动播放，不预先加载全部录像。
-- 内容依据：飞书“模拟课堂与学习笔记测试表 副本” `NRzqdB5DVoYR6wxFJfLcEO9GnJe`；已有测试录屏；本地 HUST-CSAgent 源码。原始测试文档的各项结论仍以原文为准，本页不把已有素材等同于全面验收通过。
-- 源码核对位置：`apps/web/src/views/classroom-launcher-workspace/ClassroomLauncherWorkspace.tsx` 的 pageContext、questionResume 与分步/播放状态；`ClassroomAssets.tsx` 的受限 Demo iframe；`apps/api/src/routes/registrars/learning.ts` 的当前用户笔记本及保存权限检查。
-- 对话保存笔记、完整讲稿切换、标注/显示状态等缺少对应独立本地素材的过程，保留原文入口，不使用其他录屏冒充。当前图片均为实录截帧，可后续换成专门的界面截图。
-- 仅添加静态展示模块与主页入口，不改已有工作台逻辑。未部署或推送远端。
+仓库根目录执行 `python -m http.server 4173 --bind 127.0.0.1`，打开 `http://127.0.0.1:4173/learning-showcase.html`。也可双击 HTML，移动时需保留完整 assets 文件夹。不需要 API 配置。
+
+## 内容和素材
+
+- 课堂 16 个、学习笔记 6 个，共 22 个条目；第 10、11、12 项按原测试文档合并。
+- `content.js`：功能、视频、图片、解说、素材状态与原文链接的完整映射。
+- `recordings/`：14 段不同录屏及海报，来自 Captures 当前文件，采用 H.264 / AAC，最长边限制为 1600 像素，保留音轨。
+- `screenshots/`：23 张原始截图原样复制，未使用录屏帧代替已有截图。
+- `media-manifest.json`：记录源文件、相对路径、时长与 SHA-256。15 个视频源文件中有两个完全相同，只保存一份视频内容。
+- `coverage.md`：逐项素材对应与缺失说明。
+- 视频和图片按所选功能分别切换，每份素材旁提供独立讲解。图片可放大，只有一个视频播放，素材按需载入。
+
+## 讲解补充
+
+右侧“我的讲解补充”按功能和素材分别自动保存到当前浏览器的 localStorage。切换条目或刷新页面后可继续填写。使用“导出讲解文字”下载 Markdown，包含所有预写讲解及补充。浏览器本地记录不会自动共享给其他协作者；要共享固定讲解内容，请编辑并提交 `content.js`。
+
+## 仍需补充的素材
+
+- 第 18-C 项：飞书引用的“课堂保存.mp4”与“课堂导入.mp4”SHA-256 完全相同，实际均为课堂归档。当前保留原引用视频并显著标注，独立对话保存过程需补录。
+- 第 20 项：教师 Demo 发布与导入、学生接收及无法上传课程的独立权限演示，在本地素材文件夹中没有对应文件。页面保留这些说明与待补状态。
+
+## 实现依据
+
+技术图结合 HUST-CSAgent 本地实现整理：`ClassroomLauncherWorkspace.tsx` 的 pageContext、questionResume 和页面/分步状态；`ClassroomAssets.tsx` 的 Demo iframe 隔离；后端 `routes/registrars/learning.ts` 的用户笔记本访问及保存权限检查。展示素材来自原测试活动，不代表此轮重新完成全部线上功能验收。

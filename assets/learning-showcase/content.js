@@ -1,204 +1,808 @@
 window.LEARNING_SHOWCASE = {
   "classroom": [
     {
-      "id": "entry",
-      "title": "从课件进入课堂",
-      "subtitle": "同一份教学材料，连接课前选择与课中学习。",
-      "case": "02",
+      "id": "c01",
+      "number": "01",
+      "label": "最近与书架",
+      "title": "最近打开与课程书架",
+      "group": "课件与画布",
+      "summary": "从“接着上次学”与“选择一门课”两种需求出发，展示模拟课堂的首页。",
       "steps": [
-        "从课程书架选择课程，打开课件列表。",
-        "选择一份课件开始课堂，确认课件名称与课堂画布对应。"
+        "先看最近打开区域，定位之前学习的课件。",
+        "再看课程书架，按课程进入后续材料。"
       ],
-      "meaning": "课堂有明确的材料入口。讲解、提问和记录都围绕选中的课件展开，而不是重新建立一个无背景的对话。",
-      "observe": "录屏呈现进入流程；下载与各文件格式的核对，参见测试文档中的独立记录。",
+      "meaning": "最近打开缩短继续学习的路径，书架提供按课程组织材料的入口。",
+      "media": [
+        {
+          "kind": "image",
+          "id": "01-02",
+          "title": "最近打开的课件",
+          "src": "screenshots/01-02.png",
+          "width": 1280,
+          "height": 689,
+          "sourceFile": "01\\1280X1280.PNG",
+          "explanation": "上方的最近打开记录，让学习者直接回到熟悉的课件；下方按课程组织更多资料。"
+        },
+        {
+          "kind": "image",
+          "id": "01-01",
+          "title": "课程书架",
+          "src": "screenshots/01-01.png",
+          "width": 1280,
+          "height": 770,
+          "sourceFile": "01\\1280X1280 (4).PNG",
+          "explanation": "课程卡片覆盖计算机通信与网络、数据结构、C 语言等课程，先选课程，再选具体课件。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnLxYMljYhc6ulLbh9PVZZ1f"
+    },
+    {
+      "id": "c02",
+      "number": "02",
+      "label": "下载与开课",
+      "title": "课程详情、下载与开始课堂",
+      "group": "课件与画布",
+      "summary": "从课程书架进入课件列表，再打开选定课堂，展示完整的学习入口。",
+      "steps": [
+        "选择课程，查看课件卡片与下载入口。",
+        "开始所选课件，确认课堂页与材料对应。"
+      ],
+      "meaning": "课前资料浏览与课中学习承接起来，学习者无需重新指定教学背景。",
+      "media": [
+        {
+          "kind": "video",
+          "id": "entry",
+          "title": "选择课件并进入课堂",
+          "src": "recordings/entry.mp4",
+          "poster": "recordings/entry.jpg",
+          "duration": 18.21,
+          "sourceFile": "第二个.mp4",
+          "explanation": "从课程书架进入课件列表，说明卡片上的下载与开始课堂入口，再进入选中的课堂。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
       "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnp9ZyaDbc1DW8Wh4NtGmnTz"
     },
     {
-      "id": "builds",
-      "title": "把一页 PPT 拆成教学节奏",
-      "subtitle": "以计算机网络课件，展示页内内容逐步展开。",
-      "case": "06",
+      "id": "c03",
+      "number": "03",
+      "label": "多格式资料",
+      "title": "多格式查看与下载",
+      "group": "课件与画布",
+      "summary": "课件列表与浏览器下载记录共同呈现不同格式的资料交付。",
       "steps": [
-        "观察同一页上信息的先后出现顺序。",
-        "按步骤推进内容，再回看页面的整体关系。"
+        "选择两种课程资料，查看文件名称与下载入口。",
+        "结合浏览器下载列表解释文件格式与保存结果。"
       ],
-      "meaning": "一页中的概念可以按讲解顺序出现，给学习者留出观察和理解的时间。这里展示的是 PPT 页内分步。",
-      "observe": "重点看同一页中的变化。语音是否跟随步骤，需带声结合当前部署检查。",
+      "meaning": "课程原始材料可以保留和带走，线上学习与离线查阅形成互补。",
+      "media": [
+        {
+          "kind": "image",
+          "id": "03-01",
+          "title": "信号与线性系统：下载记录",
+          "src": "screenshots/03-01.png",
+          "width": 1280,
+          "height": 698,
+          "sourceFile": "03\\1280X1280 (1).PNG",
+          "explanation": "课件列表与浏览器下载面板同时出现，可核对课程资料名称和下载结果。"
+        },
+        {
+          "kind": "image",
+          "id": "03-02",
+          "title": "计算机通信与网络：下载记录",
+          "src": "screenshots/03-02.png",
+          "width": 1280,
+          "height": 687,
+          "sourceFile": "03\\1280X1280.PNG",
+          "explanation": "切换到另一门课程，观察不同资料的下载记录。具体支持格式以原测试记录和文件本身为准。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnLjmPlnNFSYcePZ6Q60B5if"
+    },
+    {
+      "id": "c04",
+      "number": "04",
+      "label": "缩放与全屏",
+      "title": "显示与布局",
+      "group": "课件与画布",
+      "summary": "用四种课堂画布状态，说明阅读舒适度与内容完整性如何兼顾。",
+      "steps": [
+        "先看默认页面适应布局。",
+        "对照放大、缩小与课堂全屏状态，说明画布空间的变化。"
+      ],
+      "meaning": "小字和细节需要放大，概览关系需要缩小，沉浸阅读需要更多画布空间。",
+      "media": [
+        {
+          "kind": "image",
+          "id": "04-01",
+          "title": "页面适应状态",
+          "src": "screenshots/04-01.png",
+          "width": 1280,
+          "height": 705,
+          "sourceFile": "04\\1280X1280 (2).PNG",
+          "explanation": "在常规课堂布局下，课件、讲解区域与页面控制共同保留。"
+        },
+        {
+          "kind": "image",
+          "id": "04-02",
+          "title": "页面放大状态",
+          "src": "screenshots/04-02.png",
+          "width": 1280,
+          "height": 707,
+          "sourceFile": "04\\1beb3063-3c6f-4299-9a11-155bfda1a3ba.png",
+          "explanation": "放大后检查图中文字与公式细节，画布可见范围相应缩小。"
+        },
+        {
+          "kind": "image",
+          "id": "04-03",
+          "title": "页面缩小状态",
+          "src": "screenshots/04-03.png",
+          "width": 1280,
+          "height": 709,
+          "sourceFile": "04\\33bcde49-bccd-4433-ac88-7f65c5121172.png",
+          "explanation": "缩小后可以快速观察一整页的内容组织和留白。"
+        },
+        {
+          "kind": "image",
+          "id": "04-04",
+          "title": "课堂全屏状态",
+          "src": "screenshots/04-04.png",
+          "width": 1280,
+          "height": 711,
+          "sourceFile": "04\\e8bd5493-b0b6-47a1-92da-c4151b705e4f.png",
+          "explanation": "课堂占用更多可用空间，课件和互动区域仍保持对应布局。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcngX4lSAxEitGaJZqFpENdob"
+    },
+    {
+      "id": "c05",
+      "number": "05",
+      "label": "标注与框选",
+      "title": "AI 标注与手动框选",
+      "group": "课件与画布",
+      "summary": "把注意力定位到课件中的具体区域，让提问与讲解有可见的指向。",
+      "steps": [
+        "指出教学目标页中的标记区域。",
+        "说明自动标注与自己框选区域各自适用的场景。"
+      ],
+      "meaning": "标注连接文字解释与页面位置，手动框选让学习者可以主动指出疑惑。",
+      "media": [
+        {
+          "kind": "image",
+          "id": "05-01",
+          "title": "课件重点与框选区域",
+          "src": "screenshots/05-01.png",
+          "width": 1280,
+          "height": 957,
+          "sourceFile": "05\\08af6d96-47fe-4c45-9189-60654aeb082a.png",
+          "explanation": "画面保留了教学目标页上的标记与选区。展示时可以指向具体一行，解释重点定位和区域提问。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnOhr5TJkyDXFCXviLg0oqac"
+    },
+    {
+      "id": "c06",
+      "number": "06",
+      "label": "动画分步",
+      "title": "PPT 动画分步",
+      "group": "课件与画布",
+      "summary": "同一页中的信息按教学顺序逐步出现，而不是一次展示全部内容。",
+      "steps": [
+        "观察“广播链路的特点”这一页的初始状态。",
+        "跟随图形和要点逐项出现，解释同页信息的先后关系。"
+      ],
+      "meaning": "页内分步提供教学节奏，让学习者先理解一个概念，再把它与后续信息连接起来。",
+      "media": [
+        {
+          "kind": "video",
+          "id": "builds",
+          "title": "广播链路：页内逐步展示",
+          "src": "recordings/builds.mp4",
+          "poster": "recordings/builds.jpg",
+          "duration": 10.21,
+          "sourceFile": "动画分步.mp4",
+          "explanation": "先看初始要点，再跟随新增的说明与图形，强调这些变化都发生在同一张 PPT 内。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
       "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnSFrS2QHTfIjXKEsR6QLYyb"
     },
     {
-      "id": "lecture",
-      "title": "多种讲稿，服务同一堂课",
-      "subtitle": "预制讲稿、AI 实时讲解与个人讲稿共同构成教学入口。",
-      "case": "10–12",
+      "id": "c07",
+      "number": "07",
+      "label": "讲稿管理",
+      "title": "讲稿管理",
+      "group": "讲稿与互动",
+      "summary": "从讲稿列表说明预制讲稿与个人讲稿的使用、下载、生成和导入入口。",
       "steps": [
-        "先以课件页面为共同依据，展示当前讲解。",
-        "讲解时说明三种方式：采用已有讲稿、即时追问、使用个人适配讲稿。"
+        "查看讲稿列表中的默认版本与个人版本。",
+        "指出使用、下载、删除及个人讲稿创建入口，并结合操作录屏说明编辑。"
       ],
-      "meaning": "预制讲稿保留教师的教学组织，实时问答应对当下疑惑，个人讲稿承载学习者自己的理解。它们应当服务同一份课件。",
-      "observe": "本地录屏呈现课件讲解与交互；完整的讲稿切换过程请对照原文第 10–12 项视频，不能仅凭这段录屏推断三种模式全部通过。",
+      "meaning": "讲稿作为可管理的教学资源，允许保留成熟讲法，也允许学习者维护适配版本。",
+      "media": [
+        {
+          "kind": "image",
+          "id": "07-01",
+          "title": "讲稿使用与管理入口",
+          "src": "screenshots/07-01.png",
+          "width": 1280,
+          "height": 861,
+          "sourceFile": "07\\0a035666-2ebb-483d-961b-f129d856ea47.png",
+          "explanation": "列表中可见使用讲稿、生成讲稿、下载和删除等操作入口，便于解释讲稿的生命周期。"
+        },
+        {
+          "kind": "image",
+          "id": "07-02",
+          "title": "下载与删除按钮",
+          "src": "screenshots/07-02.png",
+          "width": 1280,
+          "height": 773,
+          "sourceFile": "07\\c245287f-d2aa-4396-87c6-c0cb042390a9.png",
+          "explanation": "局部截图把讲稿条目末端的下载和删除入口单独标出，适合讲解权限与资源管理。"
+        },
+        {
+          "kind": "video",
+          "id": "teacher-script",
+          "title": "补充：教师修改讲稿",
+          "src": "recordings/teacher-script.mp4",
+          "poster": "recordings/teacher-script.jpg",
+          "duration": 20.71,
+          "sourceFile": "教师讲稿修改.mp4",
+          "explanation": "教师在讲稿编辑区修改内容，再回到课堂使用。这里作为讲稿维护的操作补充，与第 20 项共用同一份素材。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnqAiGTaOjipXRiqLLCiTDBf"
+    },
+    {
+      "id": "c08",
+      "number": "08",
+      "label": "课堂内笔记",
+      "title": "课堂内笔记",
+      "group": "讲稿与互动",
+      "summary": "在课件旁整理文字，选择目标笔记本，再把记录归档到个人空间。",
+      "steps": [
+        "保持课件在当前页，打开课堂笔记编辑窗口。",
+        "填写标题与内容，选择笔记本并保存，随后在学习笔记中查看。"
+      ],
+      "meaning": "记录发生在理解过程中，归档则把临时内容连接到后续复习。",
+      "media": [
+        {
+          "kind": "image",
+          "id": "08-03",
+          "title": "课堂内编辑窗口",
+          "src": "screenshots/08-03.png",
+          "width": 1280,
+          "height": 705,
+          "sourceFile": "08\\40d41539-8a95-4949-93ec-574863fa65de.png",
+          "explanation": "笔记窗口覆盖课堂一部分区域，学习者仍能看到正在学习的课件。"
+        },
+        {
+          "kind": "image",
+          "id": "08-01",
+          "title": "填写标题与内容",
+          "src": "screenshots/08-01.png",
+          "width": 950,
+          "height": 1262,
+          "sourceFile": "08\\05ce569c-089b-4486-8998-661846ae0b28.png",
+          "explanation": "独立的标题、正文和保存区域，让课堂要点可以先写下来。"
+        },
+        {
+          "kind": "image",
+          "id": "08-04",
+          "title": "选择归档笔记本",
+          "src": "screenshots/08-04.png",
+          "width": 994,
+          "height": 1280,
+          "sourceFile": "08\\8a9b7601-77c0-4427-a63e-45256c595af3.png",
+          "explanation": "保存前选择目标笔记本，使记录有明确归属。"
+        },
+        {
+          "kind": "image",
+          "id": "08-05",
+          "title": "课堂笔记列表",
+          "src": "screenshots/08-05.png",
+          "width": 1280,
+          "height": 717,
+          "sourceFile": "08\\bdb73a79-abbb-43e8-a9f9-5c68c9db5b8e.png",
+          "explanation": "笔记标签下可以再次定位课堂记录，继续使用相关内容。"
+        },
+        {
+          "kind": "image",
+          "id": "08-02",
+          "title": "进入笔记本继续编辑",
+          "src": "screenshots/08-02.png",
+          "width": 1280,
+          "height": 724,
+          "sourceFile": "08\\0d98df5a-45eb-497e-8686-f38112947331.png",
+          "explanation": "归档后的内容进入个人笔记本，继续整理为更完整的学习笔记。"
+        },
+        {
+          "kind": "video",
+          "id": "archive",
+          "title": "课堂记录与归档过程",
+          "src": "recordings/archive.mp4",
+          "poster": "recordings/archive.jpg",
+          "duration": 10.38,
+          "sourceFile": "课堂导入.mp4",
+          "explanation": "在数据结构课堂里填写笔记内容，选择笔记本并保存，再进入学习笔记查看记录。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnBklhxU5ddoOel6oA6h5cXe"
+    },
+    {
+      "id": "c09",
+      "number": "09",
+      "label": "三个教学 Demo",
+      "title": "三个教学 Demo",
+      "group": "讲稿与互动",
+      "summary": "分别用查找、排序和网络协议过程，展示课堂中可操作的知识表达。",
+      "steps": [
+        "依次切换二分查找、冒泡排序和 TCP 三个视频。",
+        "观察输入、步骤和状态变化，并解释过程中的关键判断。"
+      ],
+      "meaning": "不同知识需要不同的可视化：二分强调区间收缩，冒泡强调比较与交换，TCP 强调阈值前后的增长阶段。",
+      "media": [
+        {
+          "kind": "video",
+          "id": "binary",
+          "title": "二分查找",
+          "src": "recordings/binary.mp4",
+          "poster": "recordings/binary.jpg",
+          "duration": 11.83,
+          "sourceFile": "二分demo.mp4",
+          "explanation": "观察目标值、中点与左右边界的变化，解释为什么下一轮只保留一半区间。"
+        },
+        {
+          "kind": "video",
+          "id": "bubble",
+          "title": "冒泡排序",
+          "src": "recordings/bubble.mp4",
+          "poster": "recordings/bubble.jpg",
+          "duration": 16.25,
+          "sourceFile": "冒泡demo.mp4",
+          "explanation": "指向正在比较的相邻元素，跟随交换与轮次变化，解释有序区间如何逐渐扩大。"
+        },
+        {
+          "kind": "video",
+          "id": "tcp",
+          "title": "TCP 慢启动与拥塞避免",
+          "src": "recordings/tcp.mp4",
+          "poster": "recordings/tcp.jpg",
+          "duration": 14.62,
+          "sourceFile": "tcpdemo.mp4",
+          "explanation": "演示拥塞窗口 cwnd 随 RTT 轮次变化，结合慢启动阈值说明指数增长与线性增长的区别。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnJ7fvW5PvFSxO7ogKh73E9d"
+    },
+    {
+      "id": "c10",
+      "number": "10–12",
+      "label": "三类讲解结合",
+      "title": "预制讲稿 + AI 实时讲解 + 个人讲稿",
+      "group": "讲稿与互动",
+      "summary": "把原文合并后的三类讲解方式放在同一个演示中，展示已有讲稿与个性化学习之间的切换。",
+      "steps": [
+        "先展示已有讲稿下的课堂讲解。",
+        "切换讲稿或个人版本，再说明实时提问如何补足当前理解。"
+      ],
+      "meaning": "预制讲稿提供稳定组织，个人讲稿提供适配表达，实时讲解回应当下问题；三者围绕同一份课件共同工作。",
+      "media": [
+        {
+          "kind": "video",
+          "id": "scripts",
+          "title": "多讲稿使用和切换",
+          "src": "recordings/scripts.mp4",
+          "poster": "recordings/scripts.jpg",
+          "duration": 55.17,
+          "sourceFile": "多讲稿使用和切换.mp4",
+          "explanation": "以“常见 CNN 网络”课件为例，展示讲解区域、讲稿选择与个人讲稿编辑窗口，说明三种方式如何在课堂中结合。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
       "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcntmTHrHw4tKnf1eCibZn2wd"
     },
     {
-      "id": "guide",
-      "title": "把“看不懂”变成具体问题",
-      "subtitle": "数据结构中的比赛安排：从报名关系走向图模型。",
-      "case": "13",
+      "id": "c13",
+      "number": "13",
+      "label": "打断与继续",
+      "title": "打断、继续与对话",
+      "group": "讲稿与互动",
+      "summary": "在连续讲解中加入追问，观察学生如何临时改变课堂节奏。",
       "steps": [
-        "先指出页面中的比赛安排及约束关系。",
-        "围绕“为什么要连边、哪些项目不能同时进行”展开追问。"
+        "先播放当前页讲解，再指出中途出现的问题。",
+        "观察回答过程与后续接续，注意是否仍对应当前课件。"
       ],
-      "meaning": "实时讲解的价值在于把难点拆开。回答需要承接当前课件和前一轮问题，让概念能够落到具体例子上。",
-      "observe": "观看回答与当前页是否相关；打断后的声音停止、接续位置，以原文打断与接续视频为补充依据。",
+      "meaning": "学生应能在卡住时提问，而不必等整页讲完；回答后还需要回到教学进度。",
+      "media": [
+        {
+          "kind": "video",
+          "id": "interrupt",
+          "title": "打断接续和流式对话",
+          "src": "recordings/interrupt.mp4",
+          "poster": "recordings/interrupt.jpg",
+          "duration": 42.96,
+          "sourceFile": "打断接续和流式对话.mp4",
+          "explanation": "以 CSMA 比较页面为例，解释“为什么这里需要确认”的追问如何插入讲解，再观察流式回答和接续。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
       "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnAtEOVgcs1w3e6s1uO5P0ye"
     },
     {
-      "id": "binary",
-      "title": "二分查找：让区间变化看得见",
-      "subtitle": "观察边界与中点如何决定下一轮搜索范围。",
-      "case": "09",
+      "id": "c14",
+      "number": "14",
+      "label": "风格与控制",
+      "title": "风格及其他控制按钮",
+      "group": "讲稿与互动",
+      "summary": "老师音色、讲解语气和课堂控制共同决定听课体验。",
       "steps": [
-        "在课堂演示区观察当前查找状态。",
-        "跟随比较结果，查看搜索区间如何收缩。"
+        "展开教师音色菜单，查看可选项。",
+        "再看讲解语气菜单，并指出播放、麦克风和页面控制的位置。"
       ],
-      "meaning": "把算法的中间状态外显出来，学生才能解释“为什么舍弃这一半”，而不只是记住最终结果。",
-      "observe": "录屏展示课堂中的交互 Demo。它可以作为运行效果证据；生成过程与不同输入的边界校验另行记录。",
-      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnJ7fvW5PvFSxO7ogKh73E9d"
+      "meaning": "内容不变时，也可以按学习者偏好调整表达方式，让听课与提问更加自然。",
+      "media": [
+        {
+          "kind": "image",
+          "id": "14-01",
+          "title": "教师音色选择",
+          "src": "screenshots/14-01.png",
+          "width": 1280,
+          "height": 698,
+          "sourceFile": "14\\374271dc-190d-4ba8-865d-655717bceffa.png",
+          "explanation": "展开老师音色选择菜单，展示不同声音风格的入口。"
+        },
+        {
+          "kind": "image",
+          "id": "14-02",
+          "title": "讲解语气与课堂控制",
+          "src": "screenshots/14-02.png",
+          "width": 1280,
+          "height": 696,
+          "sourceFile": "14\\6307f550-8cfe-42ff-991f-5bc8201aaa88.png",
+          "explanation": "展开讲解语气菜单，结合播放与语音控制解释课堂的个性化设置。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnd8KbXJa5VahUeqrBsXGw4c"
     },
     {
-      "id": "bubble",
-      "title": "冒泡排序：观察相邻比较与交换",
-      "subtitle": "用柱形变化解释一轮遍历如何确定一个位置。",
-      "case": "09",
+      "id": "c15",
+      "number": "15",
+      "label": "自动翻页",
+      "title": "自动翻页",
+      "group": "讲稿与互动",
+      "summary": "讲解从集线器页推进到交换机页，展示跨页学习的连续性。",
       "steps": [
-        "观察当前比较的相邻元素。",
-        "跟随交换与轮次推进，说明已确定区间如何扩大。"
+        "播放集线器页的讲解，观察自动翻页开关。",
+        "留意下一页出现时，课件内容和右侧讲解如何更新。"
       ],
-      "meaning": "与二分查找形成对照：一个突出区间收缩，一个突出局部比较。不同算法需要不同的可视化表达。",
-      "observe": "展示时说明比较、交换和轮次三个概念；不要把动画流畅等同于算法在所有输入上正确。",
-      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnJ7fvW5PvFSxO7ogKh73E9d"
-    },
-    {
-      "id": "autopage",
-      "title": "自动翻页，保持连续学习",
-      "subtitle": "以信号与系统课件展示相邻页面之间的推进。",
-      "case": "15",
-      "steps": [
-        "播放讲解，观察当前页的结束时刻。",
-        "查看进入下一页后，画布与讲解是否一起更新。"
+      "meaning": "自动翻页减少重复操作，同时保留手动切换与暂停的主动权。",
+      "media": [
+        {
+          "kind": "video",
+          "id": "autopage",
+          "title": "讲解与自动翻页",
+          "src": "recordings/autopage.mp4",
+          "poster": "recordings/autopage.jpg",
+          "duration": 63.42,
+          "sourceFile": "自动翻页.mp4",
+          "explanation": "观察从“集线器”到“交换机”的页面变化，说明自动推进与手动控制可以按学习需要切换。"
+        }
       ],
-      "meaning": "自动推进减少重复操作，同时仍需保留暂停、追问和手动跳页的主动权。",
-      "observe": "这段录屏较长，可拖动到翻页处。自动翻页时机与声音对应关系需要结合音轨观察。",
+      "notice": "",
+      "missing": [],
       "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnrTFSzySasvlLMLwzHdcgIc"
     },
     {
-      "id": "jump",
-      "title": "目录定位，回到关键知识点",
-      "subtitle": "以数据结构课件展示非线性的复习路径。",
-      "case": "16",
+      "id": "c16",
+      "number": "16",
+      "label": "目录与语音",
+      "title": "目录跳页与语音跟随",
+      "group": "课件与画布",
+      "summary": "不按顺序播放时，学生仍可以通过目录回到目标知识点。",
       "steps": [
-        "从当前课堂打开目录，选择目标页面。",
-        "确认目标页面出现，再继续当前知识点的学习。"
+        "从目录或页码入口定位目标页。",
+        "对照页码与当前讲解，确认声音与内容对应关系。"
       ],
-      "meaning": "课堂不只支持从第一页播到最后一页。复习和答疑更需要直接定位到卡住的概念。",
-      "observe": "页面跳转与讲解更新是两个检查点：目标页正确后，还要确认旧页面讲解已停止。",
+      "meaning": "复习和答疑需要非线性路径，页面定位后还要同步更新教学上下文。",
+      "media": [
+        {
+          "kind": "video",
+          "id": "jump",
+          "title": "数据结构：目录跳页",
+          "src": "recordings/jump.mp4",
+          "poster": "recordings/jump.jpg",
+          "duration": 12.33,
+          "sourceFile": "第十六个.mp4",
+          "explanation": "跟随数据结构课件在不同页面之间切换，指出页码和讲解内容的变化；展示时可打开声音核对跟随。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
       "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnAkrb4321XUTHFLyahp2eZQ"
+    },
+    {
+      "id": "c19",
+      "number": "19",
+      "label": "生成与多轮问答",
+      "title": "整体流式问答 + Demo 生成",
+      "group": "资源与协作",
+      "summary": "从当前课件出发，经历流式回答、多轮交互，再打开生成的演示内容。",
+      "steps": [
+        "先展示流水线技术页与当前问题。",
+        "观察回答逐渐输出，再打开生成的 Demo 查看交互结果。"
+      ],
+      "meaning": "把解释与可操作演示接在同一学习过程中，让生成内容能够及时回到课堂使用。",
+      "media": [
+        {
+          "kind": "video",
+          "id": "generate",
+          "title": "Demo 生成以及实时多轮问答",
+          "src": "recordings/generate.mp4",
+          "poster": "recordings/generate.jpg",
+          "duration": 76.29,
+          "sourceFile": "demo生成以及实时多轮问答.mp4",
+          "explanation": "以流水线技术页面为起点，展示问答输出与工具生成过程，最后查看课堂中打开的流水线演示。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnHjelQXwxbPOjI1YDEjnqDh"
+    },
+    {
+      "id": "c20",
+      "number": "20",
+      "label": "师生资源流转",
+      "title": "师生联动，教学资源流转交互",
+      "group": "资源与协作",
+      "summary": "教师准备和维护材料，学生接收并用于课堂学习，形成资源流转。",
+      "steps": [
+        "看教师创建课程、选择并上传课件的过程。",
+        "再看教师修改讲稿，说明学生侧接收、下载和使用的角色边界。"
+      ],
+      "meaning": "课程材料、讲稿和演示资源需要持续维护，师生角色决定发布和使用入口。",
+      "media": [
+        {
+          "kind": "video",
+          "id": "publish",
+          "title": "教师发布课程与课件",
+          "src": "recordings/publish.mp4",
+          "poster": "recordings/publish.jpg",
+          "duration": 49.92,
+          "sourceFile": "教师发布课程.mp4",
+          "explanation": "从创建课程到选择课件上传，再查看课程资源列表，解释教师供给材料、学生接收使用的流程。"
+        },
+        {
+          "kind": "video",
+          "id": "teacher-script",
+          "title": "教师修改讲稿",
+          "src": "recordings/teacher-script.mp4",
+          "poster": "recordings/teacher-script.jpg",
+          "duration": 20.71,
+          "sourceFile": "教师讲稿修改.mp4",
+          "explanation": "教师在课件旁修改教学讲稿，维护后续讲解使用的内容。"
+        }
+      ],
+      "notice": "",
+      "missing": [
+        "教师 Demo 发布与导入的独立操作素材",
+        "学生接收与无法上传课程的独立权限演示"
+      ],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnErLFiFQyBUNlR1OcwjavZc"
     }
   ],
   "notes": [
     {
-      "id": "write",
-      "title": "自己记录，形成个人理解",
-      "subtitle": "从笔记本进入编辑，把课堂知识改写成自己的语言。",
-      "case": "18A",
+      "id": "n17a",
+      "number": "17-A",
+      "label": "最近学习笔记",
+      "title": "最近学习笔记",
+      "group": "笔记空间",
+      "summary": "最近记录让学习者快速回到上一次整理的知识内容。",
       "steps": [
-        "进入学习笔记，打开“111”笔记本。",
-        "输入或整理笔记内容并保存。"
+        "查看近期笔记列表与预览。",
+        "通过筛选切换笔记范围，定位之前的课堂记录。"
       ],
-      "meaning": "笔记提供学习者自己的表达空间。它既可以记录结论，也可以写下暂时没想清楚的问题。",
-      "observe": "录屏呈现手写输入与保存操作；保存后重新进入的持久化结果应单独复核。",
+      "meaning": "复习不必从课程第一层重新寻找，近期活动直接成为继续学习的入口。",
+      "media": [
+        {
+          "kind": "image",
+          "id": "17-01",
+          "title": "最近笔记列表与预览",
+          "src": "screenshots/17-01.png",
+          "width": 1280,
+          "height": 706,
+          "sourceFile": "17\\171df246-e5d3-4a64-aa37-39487a3ce995.png",
+          "explanation": "左侧列出近期内容，右侧直接预览选中的课堂记录。"
+        },
+        {
+          "kind": "image",
+          "id": "17-05",
+          "title": "筛选与快速定位",
+          "src": "screenshots/17-05.png",
+          "width": 1280,
+          "height": 709,
+          "sourceFile": "17\\747073d1-5763-4944-bb7e-6ad5942df583.png",
+          "explanation": "展开筛选入口，说明如何在多条学习记录中定位目标内容。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnYrr9tFidi0iYt4IPz85wlL"
+    },
+    {
+      "id": "n17b",
+      "number": "17-B",
+      "label": "我的笔记本",
+      "title": "我的笔记本书架",
+      "group": "笔记空间",
+      "summary": "用笔记本把分散的学习记录按课程或主题组织起来。",
+      "steps": [
+        "打开我的笔记本书架，查看不同笔记本。",
+        "选择目标笔记本，进入内容列表或继续建立新的主题。"
+      ],
+      "meaning": "书架承担长期组织，最近记录承担快速返回，两种入口解决不同的复习需求。",
+      "media": [
+        {
+          "kind": "image",
+          "id": "17-02",
+          "title": "我的笔记本书架",
+          "src": "screenshots/17-02.png",
+          "width": 1280,
+          "height": 705,
+          "sourceFile": "17\\2bac3a8b-ce09-4b06-8d85-f7f5378b35ee.png",
+          "explanation": "多个笔记本以卡片呈现，展示从列表选择到主题组织的区别。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnvVkZPZaW271DxAvX0ZHf6W"
+    },
+    {
+      "id": "n17c",
+      "number": "17-C",
+      "label": "内部与管理",
+      "title": "笔记本内部与管理",
+      "group": "笔记空间",
+      "summary": "进入笔记本后，查看条目、编辑内容，并继续整理学习材料。",
+      "steps": [
+        "选择笔记本中的一条笔记。",
+        "查看编辑区域与整理入口，比较不同笔记的内容组织。"
+      ],
+      "meaning": "笔记本不是文件终点；回到内容、补充理解和重新组织，才形成持续学习。",
+      "media": [
+        {
+          "kind": "image",
+          "id": "17-03",
+          "title": "笔记内容与条目组织",
+          "src": "screenshots/17-03.png",
+          "width": 1280,
+          "height": 697,
+          "sourceFile": "17\\5cf76807-9bf6-40e5-98e3-b7e848663a9e.png",
+          "explanation": "左侧是笔记条目，右侧是内容区，可解释同一笔记本中多个条目的关系。"
+        },
+        {
+          "kind": "image",
+          "id": "17-04",
+          "title": "笔记管理与内容编辑",
+          "src": "screenshots/17-04.png",
+          "width": 1280,
+          "height": 702,
+          "sourceFile": "17\\6954c431-f596-4396-a168-c4bd58ad679a.png",
+          "explanation": "展示笔记本内部的整理入口和学习内容，说明后续修改与管理的操作位置。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnQPGBitPTsy6ePG7kQZwMme"
+    },
+    {
+      "id": "n18a",
+      "number": "18-A",
+      "label": "自己写",
+      "title": "自己写笔记",
+      "group": "三种记录场景",
+      "summary": "把现成结论改写成自己的理解，也可以留下尚未解决的问题。",
+      "steps": [
+        "从笔记本进入编辑。",
+        "输入或修改正文，保存后继续查看内容。"
+      ],
+      "meaning": "主动组织语言是理解的一部分，笔记需要给学习者自己的表达留出空间。",
+      "media": [
+        {
+          "kind": "video",
+          "id": "write",
+          "title": "自己写：修改笔记内容",
+          "src": "recordings/write.mp4",
+          "poster": "recordings/write.jpg",
+          "duration": 7.92,
+          "sourceFile": "自己写.mp4",
+          "explanation": "在笔记本中展开编辑区域并修改内容，说明笔记支持继续维护，而不是一次性保存。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
       "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnOWuoOkTkPq8JbaSdtWm0Ph"
     },
     {
-      "id": "inote",
-      "title": "边学边记，留住课堂现场",
-      "subtitle": "在数据结构课堂中直接打开笔记编辑区域。",
-      "case": "18B",
+      "id": "n18b",
+      "number": "18-B",
+      "label": "课堂导入",
+      "title": "从模拟课堂导入",
+      "group": "三种记录场景",
+      "summary": "从课件旁的记录窗口出发，保存并进入个人笔记本查看。",
       "steps": [
-        "保持当前课件可见，在课堂里打开笔记。",
-        "围绕当前页整理要点，再继续听讲或翻页。"
+        "在模拟课堂里填写要点与标题。",
+        "选择目标笔记本归档，再进入学习笔记确认内容。"
       ],
-      "meaning": "记录与理解发生在同一场景里。减少在多个页面之间来回切换，让笔记与当时的学习材料保持联系。",
-      "observe": "本段重点是课堂内编辑；归档到笔记本的过程见下一个演示。",
+      "meaning": "课堂解决当下的理解，笔记本承接之后的复习，归档把两者连接起来。",
+      "media": [
+        {
+          "kind": "video",
+          "id": "archive",
+          "title": "课堂导入：记录、归档、查看",
+          "src": "recordings/archive.mp4",
+          "poster": "recordings/archive.jpg",
+          "duration": 10.38,
+          "sourceFile": "课堂导入.mp4",
+          "explanation": "数据结构课堂中输入笔记，选择笔记本后保存，再打开学习笔记查看，完成从课堂到个人空间的流转。"
+        }
+      ],
+      "notice": "",
+      "missing": [],
       "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnhUUDbBR2Qfglk4bp3GkXTf"
     },
     {
-      "id": "archive",
-      "title": "从课堂归档到笔记本",
-      "subtitle": "把临时记录整理为之后可以重新打开的学习内容。",
-      "case": "18B",
+      "id": "n18c",
+      "number": "18-C",
+      "label": "对话保存",
+      "title": "从对话保存",
+      "group": "三种记录场景",
+      "summary": "保留原文第 18-C 项及其引用视频，同时区分功能说明与当前素材实际覆盖的范围。",
       "steps": [
-        "在课堂中整理“数据结构.md”等笔记内容。",
-        "保存到目标笔记本，再进入学习笔记查看归档结果。"
+        "预期演示：在对话结果中选择保存笔记。",
+        "选择笔记本并进入查看，核对内容和来源。"
       ],
-      "meaning": "课堂结束不应成为学习内容的终点。归档把一次课堂活动连接到持续使用的个人学习空间。",
-      "observe": "原文还包含“从对话保存笔记”的独立场景。本地没有对应的独立录屏，页面下方保留原文入口，避免用课堂归档代替对话保存。",
-      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnhUUDbBR2Qfglk4bp3GkXTf"
+      "meaning": "对话里的有价值回答也应能进入个人学习空间，与手写和课堂记录共同整理。",
+      "media": [
+        {
+          "kind": "video",
+          "id": "archive",
+          "title": "原文引用视频：课堂保存.mp4",
+          "src": "recordings/archive.mp4",
+          "poster": "recordings/archive.jpg",
+          "duration": 10.38,
+          "sourceFile": "课堂保存.mp4",
+          "explanation": "按飞书第 18-C 项保留此引用素材。经核对，它与“课堂导入.mp4”完全相同，画面呈现课堂归档，未展示从对话回答保存的独立过程。"
+        }
+      ],
+      "notice": "素材核对：课堂保存.mp4 与课堂导入.mp4 的 SHA-256 完全一致，当前视频只能说明课堂笔记归档，不能作为“从对话保存”的独立演示。",
+      "missing": [
+        "从对话回答保存笔记并在笔记本查看的独立录屏"
+      ],
+      "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnnmthW13IFrdIDNjBUhH3Gc"
     }
   ],
-  "images": {
-    "classroom": [
-      {
-        "id": "entry",
-        "title": "课程书架与学习入口",
-        "caption": "从进入课堂录屏截取的真实界面。课程入口承担材料选择，课堂承担学习与交互。",
-        "case": "02",
-        "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnp9ZyaDbc1DW8Wh4NtGmnTz"
-      },
-      {
-        "id": "builds",
-        "title": "课件画布与页内内容",
-        "caption": "计算机网络课件画面。演示讲解可指出内容层次，再切换视频观察分步变化。",
-        "case": "06",
-        "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnSFrS2QHTfIjXKEsR6QLYyb"
-      },
-      {
-        "id": "guide",
-        "title": "围绕当前页组织讨论",
-        "caption": "数据结构课堂中的建模材料。用具体页面解释问答为什么需要保留课件上下文。",
-        "case": "13",
-        "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnAtEOVgcs1w3e6s1uO5P0ye"
-      },
-      {
-        "id": "binary",
-        "title": "算法 Demo 与课件同处课堂",
-        "caption": "二分查找演示画面。静态图展示布局，视频展示状态如何随操作变化。",
-        "case": "09",
-        "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnJ7fvW5PvFSxO7ogKh73E9d"
-      }
-    ],
-    "notes": [
-      {
-        "id": "write",
-        "title": "个人笔记编辑",
-        "caption": "学习笔记编辑界面的录屏帧。可在旁侧解释记录、整理和保存的区别。",
-        "case": "18A",
-        "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnOWuoOkTkPq8JbaSdtWm0Ph"
-      },
-      {
-        "id": "inote",
-        "title": "课堂内记录",
-        "caption": "课堂笔记窗口与课件共同出现。此处强调学习场景，不以单帧代替完整保存过程。",
-        "case": "18B",
-        "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnhUUDbBR2Qfglk4bp3GkXTf"
-      },
-      {
-        "id": "archive",
-        "title": "从课堂连接个人笔记本",
-        "caption": "课堂归档演示的界面帧。与视频一起说明内容如何进入个人学习空间。",
-        "case": "18B",
-        "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnhUUDbBR2Qfglk4bp3GkXTf"
-      }
-    ]
-  }
+  "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe"
 };

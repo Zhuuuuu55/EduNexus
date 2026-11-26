@@ -1,0 +1,348 @@
+{
+  "sourceDirectory": "C:/Users/liyan/Videos/Captures",
+  "videos": [
+    {
+      "id": "entry",
+      "source": "第二个.mp4",
+      "src": "recordings/entry.mp4",
+      "poster": "recordings/entry.jpg",
+      "duration": 18.21,
+      "sha256": "6900e257bd365c1a21b67942d8dd66867d600c8fda73a6b83b0374327da1dc95",
+      "bytes": 370290
+    },
+    {
+      "id": "builds",
+      "source": "动画分步.mp4",
+      "src": "recordings/builds.mp4",
+      "poster": "recordings/builds.jpg",
+      "duration": 10.21,
+      "sha256": "c0aa658f45f796d1bfebef93571fb145e4d808cda5250344a95c3387857d39c1",
+      "bytes": 525685
+    },
+    {
+      "id": "binary",
+      "source": "二分demo.mp4",
+      "src": "recordings/binary.mp4",
+      "poster": "recordings/binary.jpg",
+      "duration": 11.83,
+      "sha256": "9538a9c8e2ddbe472ad61759e0f033af41e1b53667e04843285ad4a0ad5ee15b",
+      "bytes": 381034
+    },
+    {
+      "id": "bubble",
+      "source": "冒泡demo.mp4",
+      "src": "recordings/bubble.mp4",
+      "poster": "recordings/bubble.jpg",
+      "duration": 16.25,
+      "sha256": "5a35722cf0a138730cb6b6315f0fd467d9f7fe666561ec715594127ccf4daac8",
+      "bytes": 391398
+    },
+    {
+      "id": "tcp",
+      "source": "tcpdemo.mp4",
+      "src": "recordings/tcp.mp4",
+      "poster": "recordings/tcp.jpg",
+      "duration": 14.62,
+      "sha256": "f9dd51f04ecaa781270e3df70cb32aa5375ff844f592d8e3a1da5078c6861270",
+      "bytes": 245767
+    },
+    {
+      "id": "scripts",
+      "source": "多讲稿使用和切换.mp4",
+      "src": "recordings/scripts.mp4",
+      "poster": "recordings/scripts.jpg",
+      "duration": 55.17,
+      "sha256": "c5a9c62dd0e32b6d186c73bdda645441712cacbda6142bed6ba681137d7d3ffc",
+      "bytes": 1984575
+    },
+    {
+      "id": "interrupt",
+      "source": "打断接续和流式对话.mp4",
+      "src": "recordings/interrupt.mp4",
+      "poster": "recordings/interrupt.jpg",
+      "duration": 42.96,
+      "sha256": "ff60988e5868471d4c7c1f2f5d683e8b3e69319f058b5fe70336130be9fc392c",
+      "bytes": 1872235
+    },
+    {
+      "id": "autopage",
+      "source": "自动翻页.mp4",
+      "src": "recordings/autopage.mp4",
+      "poster": "recordings/autopage.jpg",
+      "duration": 63.42,
+      "sha256": "198db6b38193738abdf6d33354df4dcf247441d44f7caab20101fcd2c1f669d5",
+      "bytes": 2318098
+    },
+    {
+      "id": "jump",
+      "source": "第十六个.mp4",
+      "src": "recordings/jump.mp4",
+      "poster": "recordings/jump.jpg",
+      "duration": 12.33,
+      "sha256": "ae9cec7dad8adf8b8ea44d33db1538b29ca10f5f58e11e81a76bff0814df1514",
+      "bytes": 1079460
+    },
+    {
+      "id": "write",
+      "source": "自己写.mp4",
+      "src": "recordings/write.mp4",
+      "poster": "recordings/write.jpg",
+      "duration": 7.92,
+      "sha256": "31d1214da1dadcddac8138a69f20c786238f6884003cd21c993aa5924da1d770",
+      "bytes": 145499
+    },
+    {
+      "id": "archive",
+      "source": "课堂导入.mp4",
+      "src": "recordings/archive.mp4",
+      "poster": "recordings/archive.jpg",
+      "duration": 10.38,
+      "sha256": "886eaae2960615a3feb7f46de9fc1e3dab0da2fda1e8f606a407ae69124fb84d",
+      "bytes": 278834
+    },
+    {
+      "id": "generate",
+      "source": "demo生成以及实时多轮问答.mp4",
+      "src": "recordings/generate.mp4",
+      "poster": "recordings/generate.jpg",
+      "duration": 76.29,
+      "sha256": "c138bba5dd14c27f3eb96910d71006eed3aacc5207b7c66aeeeec13145183d9a",
+      "bytes": 2838614
+    },
+    {
+      "id": "publish",
+      "source": "教师发布课程.mp4",
+      "src": "recordings/publish.mp4",
+      "poster": "recordings/publish.jpg",
+      "duration": 49.92,
+      "sha256": "7fb63b68352ddf90b27e6d1a784b31ec9c8641e80b6a8871cc8f29b158180712",
+      "bytes": 2450474
+    },
+    {
+      "id": "teacher-script",
+      "source": "教师讲稿修改.mp4",
+      "src": "recordings/teacher-script.mp4",
+      "poster": "recordings/teacher-script.jpg",
+      "duration": 20.71,
+      "sha256": "622049191b9e68b525609793a02ee67e59d43c202c64d24f3b9367f446a0ebc9",
+      "bytes": 1032063
+    }
+  ],
+  "aliases": [
+    {
+      "source": "课堂保存.mp4",
+      "sameAs": "archive",
+      "sha256": "886eaae2960615a3feb7f46de9fc1e3dab0da2fda1e8f606a407ae69124fb84d",
+      "note": "与课堂导入.mp4的SHA256完全相同；飞书18-C引用此文件，画面实际为课堂笔记归档。"
+    }
+  ],
+  "images": [
+    {
+      "id": "01-01",
+      "case": "01",
+      "source": "01\\1280X1280 (4).PNG",
+      "src": "screenshots/01-01.png",
+      "width": 1280,
+      "height": 770,
+      "sha256": "36df658ebdeeb416962a7594da0295f4bd591f6d1fe455c8ad20e3ca0ca30319"
+    },
+    {
+      "id": "01-02",
+      "case": "01",
+      "source": "01\\1280X1280.PNG",
+      "src": "screenshots/01-02.png",
+      "width": 1280,
+      "height": 689,
+      "sha256": "563ff3e4f67980bd7e64aa7a102b6d1e030445f242ed0d59ed566ed72c30e925"
+    },
+    {
+      "id": "03-01",
+      "case": "03",
+      "source": "03\\1280X1280 (1).PNG",
+      "src": "screenshots/03-01.png",
+      "width": 1280,
+      "height": 698,
+      "sha256": "650900655f708f96dce1f31633745c4f6d2604bb04382c86f3390aac4c449e3e"
+    },
+    {
+      "id": "03-02",
+      "case": "03",
+      "source": "03\\1280X1280.PNG",
+      "src": "screenshots/03-02.png",
+      "width": 1280,
+      "height": 687,
+      "sha256": "4c0a4bae959301c3f148aa1a4f76792b02823b4a22b266840f8c596bcf4f4462"
+    },
+    {
+      "id": "04-01",
+      "case": "04",
+      "source": "04\\1280X1280 (2).PNG",
+      "src": "screenshots/04-01.png",
+      "width": 1280,
+      "height": 705,
+      "sha256": "ad687cc99b943d5b01e99a211c694b6aa0cd1d585614911f1109f93f196195dd"
+    },
+    {
+      "id": "04-02",
+      "case": "04",
+      "source": "04\\1beb3063-3c6f-4299-9a11-155bfda1a3ba.png",
+      "src": "screenshots/04-02.png",
+      "width": 1280,
+      "height": 707,
+      "sha256": "b439309be5fea54713e583e0609e356e697cd0481b3bdb89ddaaa152204d2ccf"
+    },
+    {
+      "id": "04-03",
+      "case": "04",
+      "source": "04\\33bcde49-bccd-4433-ac88-7f65c5121172.png",
+      "src": "screenshots/04-03.png",
+      "width": 1280,
+      "height": 709,
+      "sha256": "be4fbf654ae1df9ed178439ce47bc5dac47226d5bf99610b854dc8ef00b9574d"
+    },
+    {
+      "id": "04-04",
+      "case": "04",
+      "source": "04\\e8bd5493-b0b6-47a1-92da-c4151b705e4f.png",
+      "src": "screenshots/04-04.png",
+      "width": 1280,
+      "height": 711,
+      "sha256": "f4e9a9fac39c03d4b61f8a380fd27eea8a5170a3714b6b5aa5af8dcd77970477"
+    },
+    {
+      "id": "05-01",
+      "case": "05",
+      "source": "05\\08af6d96-47fe-4c45-9189-60654aeb082a.png",
+      "src": "screenshots/05-01.png",
+      "width": 1280,
+      "height": 957,
+      "sha256": "103b8e496132f8d175d634ed44cfec3691a09e65d153934e9d39b8ba4e00f376"
+    },
+    {
+      "id": "07-01",
+      "case": "07",
+      "source": "07\\0a035666-2ebb-483d-961b-f129d856ea47.png",
+      "src": "screenshots/07-01.png",
+      "width": 1280,
+      "height": 861,
+      "sha256": "cf7eb5d26818d91e372279da41febe5219710cd905de6262139faaa9365540c4"
+    },
+    {
+      "id": "07-02",
+      "case": "07",
+      "source": "07\\c245287f-d2aa-4396-87c6-c0cb042390a9.png",
+      "src": "screenshots/07-02.png",
+      "width": 1280,
+      "height": 773,
+      "sha256": "fdc980c2ba9527258662c712a7a7057ed1b75cd8f753b8637c4eb1b797ed1207"
+    },
+    {
+      "id": "08-01",
+      "case": "08",
+      "source": "08\\05ce569c-089b-4486-8998-661846ae0b28.png",
+      "src": "screenshots/08-01.png",
+      "width": 950,
+      "height": 1262,
+      "sha256": "d1cc57b893ba64ff09c75924b51c1b3f81d4397c214415a748bb681e3fb4b08f"
+    },
+    {
+      "id": "08-02",
+      "case": "08",
+      "source": "08\\0d98df5a-45eb-497e-8686-f38112947331.png",
+      "src": "screenshots/08-02.png",
+      "width": 1280,
+      "height": 724,
+      "sha256": "82dd20cbafae496476ce9a19c98351dd08d73778db5383d434fcd37e53f1aba2"
+    },
+    {
+      "id": "08-03",
+      "case": "08",
+      "source": "08\\40d41539-8a95-4949-93ec-574863fa65de.png",
+      "src": "screenshots/08-03.png",
+      "width": 1280,
+      "height": 705,
+      "sha256": "d4a1524b5b7e31037c92cfb4d25419e908da40eb4f751d00e0aec6677c1a62f0"
+    },
+    {
+      "id": "08-04",
+      "case": "08",
+      "source": "08\\8a9b7601-77c0-4427-a63e-45256c595af3.png",
+      "src": "screenshots/08-04.png",
+      "width": 994,
+      "height": 1280,
+      "sha256": "627970919c92211e5901ec320db6ea858404b8f6eabd67ece6b0602c5acada9e"
+    },
+    {
+      "id": "08-05",
+      "case": "08",
+      "source": "08\\bdb73a79-abbb-43e8-a9f9-5c68c9db5b8e.png",
+      "src": "screenshots/08-05.png",
+      "width": 1280,
+      "height": 717,
+      "sha256": "4c0ba76061a9c7f95fe48e7917c7d4923b106c1fbf44c697b9e134fab53649b5"
+    },
+    {
+      "id": "14-01",
+      "case": "14",
+      "source": "14\\374271dc-190d-4ba8-865d-655717bceffa.png",
+      "src": "screenshots/14-01.png",
+      "width": 1280,
+      "height": 698,
+      "sha256": "74f72a6c782211fbf6f4e51188cad9ec0157860e9344a9f0afd9a2c11fb31b57"
+    },
+    {
+      "id": "14-02",
+      "case": "14",
+      "source": "14\\6307f550-8cfe-42ff-991f-5bc8201aaa88.png",
+      "src": "screenshots/14-02.png",
+      "width": 1280,
+      "height": 696,
+      "sha256": "ef110fd01c3b8fd9f988306046bf1e5047185a83cd6290e8da00b21a291cf0f9"
+    },
+    {
+      "id": "17-01",
+      "case": "17",
+      "source": "17\\171df246-e5d3-4a64-aa37-39487a3ce995.png",
+      "src": "screenshots/17-01.png",
+      "width": 1280,
+      "height": 706,
+      "sha256": "17e98cc661852e7df53403e46550b5491e4102017548eb00e886dbcadb6a70f8"
+    },
+    {
+      "id": "17-02",
+      "case": "17",
+      "source": "17\\2bac3a8b-ce09-4b06-8d85-f7f5378b35ee.png",
+      "src": "screenshots/17-02.png",
+      "width": 1280,
+      "height": 705,
+      "sha256": "729a98b587530abbe7a27d12c66d9fa87b8473fb8448bc9a5f87f610deb88615"
+    },
+    {
+      "id": "17-03",
+      "case": "17",
+      "source": "17\\5cf76807-9bf6-40e5-98e3-b7e848663a9e.png",
+      "src": "screenshots/17-03.png",
+      "width": 1280,
+      "height": 697,
+      "sha256": "e30cc1fc173a213b572f304af7f729ede179b9a1ba02eb5802199480d2e1f843"
+    },
+    {
+      "id": "17-04",
+      "case": "17",
+      "source": "17\\6954c431-f596-4396-a168-c4bd58ad679a.png",
+      "src": "screenshots/17-04.png",
+      "width": 1280,
+      "height": 702,
+      "sha256": "babb774b4874ff313e690fadcf3d807426750e0a001c8380204a3169e50d6186"
+    },
+    {
+      "id": "17-05",
+      "case": "17",
+      "source": "17\\747073d1-5763-4944-bb7e-6ad5942df583.png",
+      "src": "screenshots/17-05.png",
+      "width": 1280,
+      "height": 709,
+      "sha256": "8779161d1bca137ce33b8de1ffa152dd6e6dcc96b24f4dc170cd08aadea70839"
+    }
+  ]
+}
