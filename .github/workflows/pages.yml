@@ -25,11 +25,12 @@ jobs:
       - name: Prepare static site
         run: |
           test -f index.html
+          test -f public-affairs.html
           test -f workspace-preview.html
           test -f demo-workspace-preview.html
           test -d assets
           mkdir -p _site
-          cp index.html workspace-preview.html demo-workspace-preview.html _site/
+          cp index.html public-affairs.html workspace-preview.html demo-workspace-preview.html _site/
           cp -R assets _site/
 
       - name: Configure GitHub Pages
