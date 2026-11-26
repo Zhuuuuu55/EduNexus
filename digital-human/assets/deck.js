@@ -1,0 +1,28 @@
+(()=>{
+ const slides=[...document.querySelectorAll('.deck-slide')],prev=document.querySelector('[data-prev]'),next=document.querySelector('[data-next]'),jump=document.querySelector('.page-jump select'),counter=document.querySelector('.page-count'),bar=document.querySelector('.deck-progress i');
+ if(!slides.length)return;
+ let current=0;
+ function fit(){document.documentElement.style.setProperty('--deck-scale',Math.min(innerWidth/1600,innerHeight/900));}
+ function show(index,focus=false){
+  current=Math.max(0,Math.min(slides.length-1,index));
+  document.querySelectorAll('video').forEach(v=>v.pause());
+  slides.forEach((s,i)=>{s.hidden=i!==current;});
+  prev.disabled=current===0;next.disabled=current===slides.length-1;
+  jump.value=String(current);counter.textContent=(current+1)+' / '+slides.length;bar.style.width=((current+1)/slides.length*100)+'%';
+  history.replaceState(null,'','#slide-'+(current+1));
+  if(focus)slides[current].focus({preventScroll:true});
+ }
+ prev.addEventListener('click',()=>show(current-1,true));next.addEventListener('click',()=>show(current+1,true));jump.addEventListener('change',()=>show(Number(jump.value),true));
+ document.addEventListener('keydown',e=>{
+  if(e.altKey||e.ctrlKey||e.metaKey||e.target.closest('video,input,textarea,select,button,a,[contenteditable=true]'))return;
+  let n;if(e.key==='ArrowRight'||e.key==='PageDown')n=current+1;if(e.key==='ArrowLeft'||e.key==='PageUp')n=current-1;if(e.key==='Home')n=0;if(e.key==='End')n=slides.length-1;
+  if(n!==undefined){e.preventDefault();show(n,true);}
+ });
+ const full=document.querySelector('[data-fullscreen]');
+ full.addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch{full.textContent='请按 F11 全屏';}});
+ document.addEventListener('fullscreenchange',()=>{full.textContent=document.fullscreenElement?'退出全屏':'全屏展示';fit();});
+ document.addEventListener('visibilitychange',()=>{if(document.hidden)document.querySelectorAll('video').forEach(v=>v.pause());});
+ document.querySelectorAll('video').forEach(v=>{v.addEventListener('error',()=>{if(v.nextElementSibling)v.nextElementSibling.textContent='视频暂不可播放，请刷新重试。';});});
+ window.addEventListener('resize',fit);window.addEventListener('hashchange',()=>{const m=location.hash.match(/^#slide-(\d+)$/);if(m)show(Number(m[1])-1);});
+ fit();const m=location.hash.match(/^#slide-(\d+)$/);show(m?Number(m[1])-1:0);
+})();

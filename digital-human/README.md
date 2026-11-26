@@ -60,3 +60,9 @@
       <li>手机宽度（390px）走查课堂。</li>
     </ul></div>
   </div>
+
+## 逐页演示版
+默认入口 classroom.html、algorithm.html 采用 1600×900 画幅，按窗口等比缩放，支持按钮、方向键、PageUp/PageDown、Home/End、页码目录与全屏。切页及切后台会暂停视频，返回某页保留视频位置。
+原滚动版留档为 classroom-scroll.html、algorithm-scroll.html，共用已有素材，不重复保存录屏。逐页版移除功能观测表，加入科研概念图，保留原主流程图。
+新增科研图的来源与提示词摘要见 assets/diagrams/research-figure-notes.txt。
+EduNexus 交付分支：digital。
