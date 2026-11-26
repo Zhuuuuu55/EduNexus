@@ -1,6 +1,8 @@
 # 模拟课堂与学习笔记完整展示
 
-入口：`learning-showcase.html`。沿用 EduNexus 首页的字体、设计令牌和浅色墨绿主题，展示目录与讲解工作区做了适量扩展。
+现场翻页入口：`learning-slides.html`（9 页，四组各 6 个演示）；完整查阅入口：`learning-showcase.html`。翻页版交互与页码说明见 [slides-guide.md](slides-guide.md)。
+
+查阅版：沿用 EduNexus 首页的字体、设计令牌和浅色墨绿主题，展示目录与讲解工作区做了适量扩展。
 
 ## 本地使用
 
