@@ -683,6 +683,8 @@ section{scroll-margin-top:84px}
 <link rel="stylesheet" href="assets/technical-report-v2.css?rev=architecture-narrative">
 <link rel="stylesheet" href="assets/public-affairs.css">
 <script src="assets/public-affairs.js" defer></script>
+<link rel="stylesheet" href="assets/algorithm-oj.css">
+<script src="assets/algorithm-oj.js" defer></script>
 </head>
 <body style="">
 
@@ -1250,39 +1252,41 @@ section{scroll-margin-top:84px}
           <p class="mode-status"><span class="status-badge sb-live">已实现</span>课件 PPT · 教案与讲稿 · 班会 PPT · 汇报 PPT</p>
         </div>
       </article></div></div></section><section class="tr-section tx-section" id="tr-ppt" aria-labelledby="tr-ppt-title"><div class="wrap"><div class="tr-heading"><span class="tr-index">课件制作：实现与优势</span><span class="tr-subtitle">技术支撑 · 自研设计 · 实际作用</span></div><h2 id="tr-ppt-title">先确认教学方案，再生成可编辑课件</h2><p class="tr-lead">平台先组织教学需求和逐页方案，教师确认后，调用 PPT Master 相关工具完成页面生产、检查与导出，再交付 PPTX 和 PDF 预览。</p>
-<div class="tx-component"><div><span>采用的技术</span><h3>将内容方案转为课件页面</h3><p>调用 PPT Master 的页面制作、检查与导出能力，参与生成可编辑的 PPTX。</p></div><div><span>项目负责的部分</span><h3>教学方案与人机协同</h3><p>组织主题、受众、参考资料和逐页讲解；绑定用户确认的方案，管理修改版本与产物交付。</p></div></div><div class="tx-production"><article><span>01</span><b>制作需求</b><small>主题 / 对象 / 资料</small></article><i>→</i><article><span>02</span><b>逐页方案</b><small>逐页结构 / 讲稿 / 视觉</small></article><i>→</i><article class="tx-confirm"><span>人工确认</span><b>方案版本核对</b><small>绑定被确认的方案</small></article><i>→</i><article><span>03</span><b>页面生成与检查</b><small>PPT Master 工具链</small></article><i>→</i><article><span>04</span><b>可编辑件 + 预览件</b><small>编辑下载 / 浏览器预览</small></article></div><div class="tx-decisions"><article><span>内容把控</span><h3>先看结构，再决定是否生成</h3><p>先调整逐页方案，便于教师把握重点、信息量和讲解顺序，减少文件生成后的大幅返工。</p></article><article><span>使用方式</span><h3>浏览方便，也能继续编辑</h3><p>PDF 用于快速翻页预览，PPTX 用于下载修改和授课。展示与编辑分别选择适合的文件形式。</p></article></div></div></section><section class="section tx-domain-showcase" id="domain-code" aria-label="算法练习功能展示"><div class="wrap"><div class="modes-grid"><article class="mode-card reveal reveal-d1">
-        <div class="mode-shot">
-          <span class="mode-num">04 · 算法练习</span>
-          <div data-shot="算法练习业务示意图" data-ratio="16:9">
-            <img src="assets/images/feature-algorithm.png" width="1680" height="945" loading="lazy" decoding="async" alt="算法练习模式业务示意图：代码编辑、执行轨迹、变量状态与测试验证" onerror="this.closest('[data-shot]').classList.add('is-missing')">
-          </div>
-        </div>
-        <div class="mode-body">
-          <span class="mode-tag"><svg class="icon" aria-hidden="true"><use href="#i-code"></use></svg>Practice · 编程训练</span>
-          <h3 class="mode-title mt-code"><svg class="icon" aria-hidden="true"><use href="#i-code"></use></svg>算法练习</h3>
-          <p class="mode-desc">从题目解析到代码实现。C / C++ / Python / Java 四种语言的答案都要先在沙箱里编译运行、跑过可见测试，才标记为「已验证」；结论区分真实判题结果与 AI 辅助分析，不把解释当成实际执行。</p>
-          <p class="mode-out"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>四语言沙箱运行 · OJ 评测证据 · Python Tutor 代码执行可视化</p>
-          <p class="mode-status"><span class="status-badge sb-live">已实现</span>编程解题 · 代码讲解 · 实验排错 · 可视化调用栈与变量变化 · 错题复盘</p>
-        </div>
-      </article></div></div></section>
-
-<!-- ===== OJ 代码可视化 · 独立工作区 ===== -->
-<section class="section feature-cinema" id="oj-visualization">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <span class="sec-eyebrow">算法练习 · 独立工作区</span>
-      <h2>代码不是只给答案，还能看见它如何运行</h2>
-      <p>从题库进入 OJ 题目，在同一工作区读题、编辑、运行和提交；切到「代码可视化」，用当前代码与公开样例逐步观察调用栈、变量、对象与引用关系。可视化用于理解过程，最终对错仍以本平台评测为准。</p>
-    </div>
-    <figure class="feature-cinema-stage reveal">
-      <div data-shot="OJ 工作区：代码可视化动画" data-ratio="1920:945">
-        <img src="assets/images/oj-visualization.png" width="1920" height="945" loading="lazy" decoding="async" alt="OJ 工作区：代码可视化页签展示运行步骤、调用栈与变量变化" onerror="this.closest('[data-shot]').classList.add('is-missing')">
-      </div>
-      <figcaption class="feature-cinema-caption"><strong>题目与导师 ↔ 代码可视化</strong><span>公开样例驱动 · 可暂停逐步查看 · 与正式评测结果区分</span></figcaption>
-    </figure>
-  </div>
-</section><section class="tr-section tx-section" id="tr-code" aria-labelledby="tr-code-title"><div class="wrap"><div class="tr-heading"><span class="tr-index">算法练习：实现与优势</span><span class="tr-subtitle">技术支撑 · 自研设计 · 实际作用</span></div><h2 id="tr-code-title">把练题、评测、答疑与复盘连起来</h2><p class="tr-lead">在线 OJ 提供真实评测，代码导师结合当前题目与提交反馈给出分层提示；Python Tutor 代码可视化帮助观察调用栈与变量变化。</p>
-<div class="tx-code-visual"><div class="tx-code-lines"><span>// 学习与验证的三条路径</span><code>题目 + 当前代码</code><code>  → 导师解释与提示</code><code>  → 公开样例的过程演示</code><code>  → 提交给评测服务</code></div><div class="tx-code-evidence"><article><b>导师提示</b><span>题面 + 当前代码 + 提交状态</span></article><article><b>Python Tutor 可视化</b><span>公开样例 + 调用栈 / 变量</span></article><article><b>真实评测</b><span>Code Lab Runner · 运行结果</span></article></div></div><div class="tx-decisions"><article><span>理解过程</span><h3>递归为什么回到上一层？</h3><p>通过调用栈与变量变化，观察函数怎样进入、返回，帮助学生把静态代码与动态执行过程联系起来。</p></article><article><span>定位问题</span><h3>语法错误与思路错误，提示应当不同</h3><p>结合真实评测结果，区分无法编译、运行出错和答案不符，再给出对应提示，帮助学生有方向地修改。</p></article></div><div class="tx-technology"><b>执行隔离</b><span>Docker 容器与 gVisor 配置限制提交代码的运行范围；实际隔离需按部署验证。</span></div></div></section>
+<div class="tx-component"><div><span>采用的技术</span><h3>将内容方案转为课件页面</h3><p>调用 PPT Master 的页面制作、检查与导出能力，参与生成可编辑的 PPTX。</p></div><div><span>项目负责的部分</span><h3>教学方案与人机协同</h3><p>组织主题、受众、参考资料和逐页讲解；绑定用户确认的方案，管理修改版本与产物交付。</p></div></div><div class="tx-production"><article><span>01</span><b>制作需求</b><small>主题 / 对象 / 资料</small></article><i>→</i><article><span>02</span><b>逐页方案</b><small>逐页结构 / 讲稿 / 视觉</small></article><i>→</i><article class="tx-confirm"><span>人工确认</span><b>方案版本核对</b><small>绑定被确认的方案</small></article><i>→</i><article><span>03</span><b>页面生成与检查</b><small>PPT Master 工具链</small></article><i>→</i><article><span>04</span><b>可编辑件 + 预览件</b><small>编辑下载 / 浏览器预览</small></article></div><div class="tx-decisions"><article><span>内容把控</span><h3>先看结构，再决定是否生成</h3><p>先调整逐页方案，便于教师把握重点、信息量和讲解顺序，减少文件生成后的大幅返工。</p></article><article><span>使用方式</span><h3>浏览方便，也能继续编辑</h3><p>PDF 用于快速翻页预览，PPTX 用于下载修改和授课。展示与编辑分别选择适合的文件形式。</p></article></div></div></section><section id="domain-code" aria-labelledby="ao-heading">
+<header class="ao-hero"><div class="ao-wrap ao-hero-card"><div class="ao-hero-copy"><p class="ao-eyebrow">算法练习 · 功能测试</p><h2 class="ao-heading" id="ao-heading">算法导师与<br>OJ 工作台</h2><p class="ao-lead">运行代码，找到失分原因，再带着评测结果问导师。修复后重交，Notebook 会把每一步串起来。</p><div class="ao-hero-links"><a class="ao-action" href="#oj-visualization">观看实机演示 ↓</a><a href="#tr-code">查看技术实现</a></div></div><figure class="ao-hero-media"><img src="assets/algorithm-oj/hero.png" loading="lazy" decoding="async" alt="算法练习示意图，包含代码编辑、算法流程和测试结果"></figure></div></header>
+<div class="ao-wrap ao-content">
+<section id="ao-overview" class="ao-panel"><h3>学生可以直接做什么</h3><div class="ao-overview-grid">
+<article><h4>提交代码</h4><p>先跑公开样例，再提交完整评测。核对预期、实际输出和通过点数。</p></article>
+<article><h4>带着结果问导师</h4><p>从分层提示开始，也可以用当前代码和判定追问边界条件。</p></article>
+<article><h4>回看修复过程</h4><p>打开提交历史与 Notebook，核对源码变化、错题卡和下一题建议。</p></article>
+<article><h4>单步看算法</h4><p>改数组、控制播放、预测相邻元素是否交换。</p></article>
+</div></section>
+<section id="oj-visualization" class="ao-panel"><h3>实机演示与复测</h3><p class="ao-intro">先选类别，再选实录片段或复测记录。</p><div class="ao-filters" id="ao-categories" aria-label="演示类别"></div>
+<div class="ao-library"><aside class="ao-selector"><div id="ao-sources" class="ao-filters" aria-label="素材类型"></div><ol id="ao-list" class="ao-list" aria-label="演示案例"></ol></aside>
+<figure class="ao-viewer"><div class="ao-media" id="ao-media" hidden><img id="ao-shot" alt="" hidden><video id="ao-video" controls playsinline preload="metadata" hidden></video><p id="ao-media-error" hidden>媒体加载失败，可查看下面的操作和结果。</p></div>
+<figcaption aria-live="polite"><p id="ao-group" class="ao-eyebrow"></p><h4 id="ao-title"></h4><div class="ao-fact"><b>操作</b><span id="ao-operation"></span></div><div class="ao-fact"><b>结果</b><span id="ao-proof"></span></div><pre id="ao-code" hidden></pre><small id="ao-trace" hidden></small></figcaption></figure></div></section>
+<section id="tr-code" class="ao-panel"><h3>从一次提交到可追溯的学习记录</h3><p class="ao-intro">React 工作台接收代码，Code Lab 执行评测。导师和 Notebook 接续处理判定与修复结果。</p>
+<div class="ao-diagram">
+<div class="ao-node ao-entry"><b>学生编写代码，提交评测</b></div><span class="ao-connector" aria-hidden="true">↓</span>
+<div class="ao-node"><b>Code Lab 执行测试</b><p>公开点提供输出对比，隐藏点返回判定摘要。</p></div><span class="ao-connector" aria-hidden="true">↓</span>
+<div class="ao-branches"><div class="ao-node"><b>未通过 · 诊断后重交</b><p>结合当前代码和失败证据，先给出提示，再用边界样例验证原因。</p></div><div class="ao-node"><b>已通过 · 回看复盘</b><p>复述不变量，核对前后源码，查看下一题建议。</p></div></div><span class="ao-connector" aria-hidden="true">↓</span>
+<div class="ao-node ao-finish"><b>Notebook 沉淀结果</b><p>记录判定、修复关系和错题卡，便于回看。</p></div>
+</div></section>
+<section class="ao-panel" id="ao-flow"><h3>怎样演示「最高分」</h3><ol class="ao-flow"><li>提交初值为 0 的版本</li><li>把评测结果交给导师分析</li><li>修复后重交，对比结果</li><li>打开 Notebook 核对修复记录</li></ol><p class="ao-example"><strong>提问示例</strong>　结合最近一次评测和当前代码，指出最可能的卡点。先给我一个可以手算的边界用例。</p></section>
+<section class="ao-panel" id="ao-comparison"><h3>同一算法任务的工具对照</h3><p class="ao-intro">以「最大值题为什么在全负数时输出 0」为例。其他平台列参考其公开说明。</p>
+<div class="ao-table-frame"><table><thead><tr><th scope="col">对照维度</th><th scope="col">EduNexus</th><th scope="col">学在华科大</th><th scope="col">OpenMAIC</th></tr></thead>
+<tbody><tr><th scope="row">从哪里开始</th><td>题面、提交代码和评测结果</td><td>课程资源、题库和 AI 助教</td><td>课程主题或教师提供的资料</td></tr>
+<tr><th scope="row">学生怎样练习</th><td>复现失败，问导师并修复重交</td><td>把边界案例编入题库或课程活动</td><td>通过课件、测验和互动模拟理解边界</td></tr>
+<tr><th scope="row">怎样回看</th><td>提交历史、修复关系和错题卡</td><td>查看课程空间内的资源与练习</td><td>查看生成的互动课堂</td></tr></tbody></table></div><p class="ao-intro"><a href="https://ugs.hust.edu.cn/info/1142/7690.htm">华中科技大学本科生院</a>　<a href="https://github.com/THU-MAIC/OpenMAIC">OpenMAIC 官方仓库</a></p></section>
+<section class="ao-panel" id="ao-verify"><h3>复测方法与验收点</h3><p class="ao-intro">在本机工作台运行案例，按下面的通过条件核对，再从复测记录查看实测结果。</p>
+<div class="ao-table-frame"><table><thead><tr><th scope="col">板块</th><th scope="col">通过条件</th><th scope="col">实机记录</th></tr></thead><tbody>
+<tr><th scope="row">OJ 评测</th><td>样例和正式提交按范围执行，判定、公开输出和隐藏点摘要正确。</td><td><a href="#oj-visualization" data-group="OJ 评测">查看 11 项 ↗</a></td></tr>
+<tr><th scope="row">算法导师</th><td>提示逐层展开，完整答案按需显示，连续追问沿用前文。</td><td><a href="#oj-visualization" data-group="算法导师">查看 11 项 ↗</a></td></tr>
+<tr><th scope="row">复盘沉淀</th><td>历史源码对应原提交，Notebook 可查笔记、修复关系和错题卡。</td><td><a href="#oj-visualization" data-group="复盘沉淀">查看 11 项 ↗</a></td></tr>
+<tr><th scope="row">实验室</th><td>目录可筛选，播放、暂停、单步与自定义输入能更新图示。</td><td><a href="#oj-visualization" data-group="实验室">查看 11 项 ↗</a></td></tr>
+</tbody></table></div></section>
+</div><p class="ao-wrap ao-credit">实录与复测 · 2026.11.25–26 · 张雯洁</p>
+</section>
 
 <!-- ===== AI 模拟课堂 ===== -->
 <section class="section classroom" id="classroom">
