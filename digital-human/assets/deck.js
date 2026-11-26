@@ -39,5 +39,5 @@
  document.addEventListener('visibilitychange',()=>{if(document.hidden)document.querySelectorAll('video').forEach(v=>v.pause());});
  document.querySelectorAll('video').forEach(v=>{v.addEventListener('error',()=>{if(v.nextElementSibling)v.nextElementSibling.textContent='视频暂不可播放，请刷新重试。';});});
  window.addEventListener('resize',fit);window.addEventListener('hashchange',()=>{const m=location.hash.match(/^#slide-(\d+)$/);if(m)show(Number(m[1])-1);});
- fit();const m=location.hash.match(/^#slide-(\d+)$/);show(m?Number(m[1])-1:0);
+ fit();const m=location.hash.match(/^#slide-(\d+)$/);show(m?Number(m[1])-1:Number(document.body.dataset.start||0));
 })();
