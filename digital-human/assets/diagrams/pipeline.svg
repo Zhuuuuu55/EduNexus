@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" font-family="'Noto Sans SC','PingFang SC',sans-serif">
+<defs>
+<marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#44586C"/></marker>
+<marker id="arg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#0B9E88"/></marker>
+</defs>
+<rect width="1200" height="470" fill="#FFFFFF"/>
+<text x="60" y="44" font-family="ui-monospace,monospace" font-size="11" letter-spacing="2" fill="#0B9E88">FIGURE 1</text>
+<text x="60" y="76" font-size="19" font-weight="700" fill="#13263B">数字人课堂：一次讲解的端到端链路</text>
+<text x="60" y="100" font-size="12" fill="#71839A">视频走 WebRTC，语音走 PCM 转发，字幕由真实播放进度驱动。</text>
+
+<path d="M1010 170 C1010 124 900 120 590 120 C280 120 170 124 170 170" fill="none" stroke="#0B9E88" stroke-width="1.4" marker-end="url(#arg)"/>
+<text x="590" y="152" text-anchor="middle" font-size="12" fill="#087A6A">WebRTC：720×1276 视频 + 音频</text>
+
+<g>
+<rect x="60" y="170" width="220" height="180" rx="14" fill="#FFFFFF" stroke="#E3ECE9"/>
+<rect x="60" y="170" width="4" height="180" fill="#0B9E88"/>
+<text x="84" y="202" font-family="ui-monospace,monospace" font-size="10" letter-spacing="1.6" fill="#71839A">BROWSER</text>
+<text x="84" y="228" font-size="15" font-weight="700" fill="#13263B">课堂舞台</text>
+<text x="84" y="254" font-size="11.5" fill="#44586C">课件渲染 · 数字人画面</text>
+<text x="84" y="274" font-size="11.5" fill="#44586C">字幕时间轴 · 翻页/暂停</text>
+<text x="84" y="294" font-size="11.5" fill="#44586C">RTP 时间戳换算播放位置</text>
+</g>
+
+<g>
+<rect x="340" y="170" width="220" height="180" rx="14" fill="#FFFFFF" stroke="#E3ECE9"/>
+<rect x="340" y="170" width="4" height="180" fill="#7B6CE8"/>
+<text x="364" y="202" font-family="ui-monospace,monospace" font-size="10" letter-spacing="1.6" fill="#71839A">CLASSROOM API</text>
+<text x="364" y="228" font-size="15" font-weight="700" fill="#13263B">课堂会话</text>
+<text x="364" y="254" font-size="11.5" fill="#44586C">建会话 · 签发实时票据</text>
+<text x="364" y="274" font-size="11.5" fill="#44586C">讲稿生成 · 公式口播规范化</text>
+<text x="364" y="294" font-size="11.5" fill="#44586C">TTS 音频 · 字幕桥接</text>
+</g>
+
+<g>
+<rect x="620" y="170" width="220" height="180" rx="14" fill="#FFFFFF" stroke="#E3ECE9"/>
+<rect x="620" y="170" width="4" height="180" fill="#3D8FE0"/>
+<text x="644" y="202" font-family="ui-monospace,monospace" font-size="10" letter-spacing="1.6" fill="#71839A">VOICE GATEWAY</text>
+<text x="644" y="228" font-size="15" font-weight="700" fill="#13263B">语音网关</text>
+<text x="644" y="254" font-size="11.5" fill="#44586C">qwen-audio-agent</text>
+<text x="644" y="274" font-size="11.5" fill="#44586C">实时识别 · 语音合成</text>
+<text x="644" y="294" font-size="11.5" fill="#44586C">PCM 16k 转发 · 背压控制</text>
+</g>
+
+<g>
+<rect x="900" y="170" width="220" height="180" rx="14" fill="#FFFFFF" stroke="#E3ECE9"/>
+<rect x="900" y="170" width="4" height="180" fill="#E08A3C"/>
+<text x="924" y="202" font-family="ui-monospace,monospace" font-size="10" letter-spacing="1.6" fill="#71839A">LIVETALKING · GPU</text>
+<text x="924" y="228" font-size="15" font-weight="700" fill="#13263B">数字人服务</text>
+<text x="924" y="254" font-size="11.5" fill="#44586C">口型合成 · 逐帧推流</text>
+<text x="924" y="274" font-size="11.5" fill="#44586C">真实音频包进度回传</text>
+<text x="924" y="294" font-size="11.5" fill="#44586C">会话回收 · 显存释放</text>
+</g>
+
+<line x1="282" y1="260" x2="334" y2="260" stroke="#44586C" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="308" y="250" text-anchor="middle" font-size="10" font-family="ui-monospace,monospace" fill="#71839A">HTTPS</text>
+<line x1="562" y1="260" x2="614" y2="260" stroke="#44586C" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="588" y="250" text-anchor="middle" font-size="10" font-family="ui-monospace,monospace" fill="#71839A">WSS</text>
+<line x1="842" y1="260" x2="894" y2="260" stroke="#44586C" stroke-width="1.2" marker-end="url(#ar)"/>
+<text x="868" y="250" text-anchor="middle" font-size="10" font-family="ui-monospace,monospace" fill="#71839A">WS</text>
+
+<path d="M1010 350 C1010 396 900 402 590 402 C280 402 170 396 170 350" fill="none" stroke="#0B9E88" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arg)"/>
+<rect x="404" y="390" width="372" height="24" fill="#FFFFFF"/>
+<text x="590" y="407" text-anchor="middle" font-size="12" fill="#087A6A">真实音频进度（RTP 包）→ 字幕推进与校正</text>
+
+<text x="60" y="452" font-size="11" fill="#71839A">注：三处服务必须指向同一实例；否则会出现 PCM 背压（429），表现为“声音在走、画面不动”。</text>
+</svg>
