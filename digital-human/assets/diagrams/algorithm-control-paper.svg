@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 650" role="img" aria-labelledby="title desc">
+<title id="title">教学步骤与播放反馈闭环</title><desc id="desc">当前步骤映射图示、代码和讲稿，讲稿通过统一语音链路播放；浏览器确认完成后才进入下一步。</desc>
+<defs><marker id="data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#087a6a"/></marker><marker id="control" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#13263b"/></marker></defs>
+<rect width="1160" height="650" fill="white"/>
+<g font-family="Noto Sans SC,Microsoft YaHei,sans-serif" fill="#13263b">
+<text x="36" y="52" font-size="27" font-weight="700">教学步骤与播放反馈闭环</text><text x="36" y="84" font-size="19" fill="#44586c">共享状态描述当前步骤，播放回执决定何时推进。</text>
+<rect x="24" y="122" width="282" height="392" fill="#f0faf7"/><rect x="324" y="122" width="340" height="392" fill="#f5f7f9"/><rect x="682" y="122" width="454" height="392" fill="#f5f7f9"/>
+<text x="42" y="155" font-size="18" font-weight="700">教学上下文</text><text x="344" y="155" font-size="18" font-weight="700">同步映射</text><text x="702" y="155" font-size="18" font-weight="700">语音与播放</text>
+<g fill="white" stroke="#087a6a" stroke-width="2"><rect x="48" y="266" width="234" height="118"/><rect x="356" y="184" width="276" height="76"/><rect x="356" y="290" width="276" height="76"/><rect x="356" y="396" width="276" height="76"/><rect x="730" y="380" width="358" height="108"/></g>
+<g text-anchor="middle"><text x="165" y="305" font-size="25" font-weight="700">当前步骤 k</text><text x="165" y="340" font-size="19">数组 · 边界 · 中点</text><text x="494" y="230" font-size="24">交互图示</text><text x="494" y="336" font-size="24">代码高亮行</text><text x="494" y="442" font-size="24">步骤讲稿</text><text x="909" y="420" font-size="24" font-weight="700">统一语音 → 数字人</text><text x="909" y="456" font-size="19">同一音频 · WebRTC 播放</text></g>
+<g stroke="#087a6a" stroke-width="2.2" fill="none" marker-end="url(#data)"><path d="M282 298H318V222H356"/><path d="M282 325H356"/><path d="M282 352H318V434H356"/><path d="M632 434H730"/></g>
+<g stroke="#13263b" stroke-width="2.2" stroke-dasharray="8 6" fill="none" marker-end="url(#control)"><path d="M909 488V556H165V384"/></g>
+<rect x="360" y="534" width="418" height="40" fill="white"/><text x="569" y="561" font-size="20" text-anchor="middle" font-weight="600">浏览器确认播完 → 进入步骤 k+1</text>
+<text x="36" y="618" font-size="19" fill="#44586c">暂停：保留当前状态与未播音频　　停止 / 切题：废弃旧播报与旧完成回执</text>
+</g></svg>
