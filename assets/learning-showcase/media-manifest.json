@@ -133,7 +133,9 @@
       "source": "课堂保存.mp4",
       "sameAs": "archive",
       "sha256": "886eaae2960615a3feb7f46de9fc1e3dab0da2fda1e8f606a407ae69124fb84d",
-      "note": "与课堂导入.mp4的SHA256完全相同；飞书18-C引用此文件，画面实际为课堂笔记归档。"
+      "note": "与课堂导入.mp4的SHA256完全相同；飞书18-C引用此文件，画面实际为课堂笔记归档。",
+      "src": "recordings/dialog-save.mp4",
+      "poster": "recordings/dialog-save.jpg"
     }
   ],
   "images": [

@@ -605,10 +605,7 @@ window.LEARNING_SHOWCASE = {
         }
       ],
       "notice": "",
-      "missing": [
-        "教师 Demo 发布与导入的独立操作素材",
-        "学生接收与无法上传课程的独立权限演示"
-      ],
+      "missing": [],
       "source": "https://mair-lab-hust.feishu.cn/docx/NRzqdB5DVoYR6wxFJfLcEO9GnJe#doxcnErLFiFQyBUNlR1OcwjavZc"
     }
   ],
@@ -788,10 +785,10 @@ window.LEARNING_SHOWCASE = {
       "media": [
         {
           "kind": "video",
-          "id": "archive",
+          "id": "dialog-save",
           "title": "原文引用视频：课堂保存.mp4",
-          "src": "recordings/archive.mp4",
-          "poster": "recordings/archive.jpg",
+          "src": "recordings/dialog-save.mp4",
+          "poster": "recordings/dialog-save.jpg",
           "duration": 10.38,
           "sourceFile": "课堂保存.mp4",
           "explanation": "用户可以将对话中的重要内容保存为学习笔记，归档到指定笔记本，便于后续查看和复习。"
