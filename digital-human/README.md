@@ -66,3 +66,6 @@
 原滚动版留档为 classroom-scroll.html、algorithm-scroll.html，共用已有素材，不重复保存录屏。逐页版移除功能观测表，加入科研概念图，保留原主流程图。
 新增科研图的来源与提示词摘要见 assets/diagrams/research-figure-notes.txt。
 EduNexus 交付分支：digital。
+
+## 按大点组织的演示版
+完整入口改为 index.html：两个大点，共 6 页。每个大点为 1 页可切换的集中演示 + 2 页技术路线/控制说明。classroom.html 与 algorithm.html 各保留 3 页独立入口。演示标签同步切换视频、文字与设计要点，切标签和翻页均暂停视频。原滚动页及共用 dh.css/dh.js 保持完整留档。
