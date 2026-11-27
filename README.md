@@ -52,3 +52,5 @@ python -m http.server 4173
 - [学习笔记](notes-showcase.html)：笔记演示与两页技术讲解。
 
 两个 HTML 分别内嵌样式、脚本和内容数据，媒体与技术图位于 `assets/learning-showcase/`，交付时请保留该目录及图片资源。使用方向键翻页，G 打开目录，F 全屏；每页演示在左侧切换，文字说明位于媒体旁边，下方显示当前演示的技术设计。技术图共六张，位于 `assets/learning-showcase/research-v2/`。原有合并展示和阅读版本继续保留。
+
+旧入口 `learning-slides.html` 会自动打开新版独立展示，避免继续显示旧的横排演示。三个 Demo 在同一区域内上下滚动查看。
