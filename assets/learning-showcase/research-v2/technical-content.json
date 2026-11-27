@@ -1,7 +1,7 @@
 {
   "interruption": {
     "title": "提问可以随时插入，讲解有序接续",
-    "image": "classroom-interruption.svg",
+    "image": "classroom-interruption.png",
     "label": "流式对话 / 中断与接续",
     "source": "把一次课堂划分为讲解、提问和继续三个阶段，保存学习进度并协调各阶段的输出。",
     "details": [
@@ -24,7 +24,7 @@
   },
   "page": {
     "title": "页面、动画与语音，按同一教学节奏推进",
-    "image": "classroom-page-gate.svg",
+    "image": "classroom-page-gate.png",
     "label": "课件展示 / 页面与步骤控制",
     "source": "将页面切换、画布准备和讲解推进分别管理，等必要条件满足后再衔接下一步。",
     "details": [
@@ -47,7 +47,7 @@
   },
   "sandbox": {
     "title": "交互 Demo 独立运行，课堂保持清晰边界",
-    "image": "classroom-demo-boundary.svg",
+    "image": "classroom-demo-boundary.png",
     "label": "交互演示 / 运行与安全边界",
     "source": "把生成或上传的演示放入受限制的独立区域，兼顾交互能力与课堂页面的稳定性。",
     "details": [
@@ -70,7 +70,7 @@
   },
   "resource": {
     "title": "教师准备资源，学生沿课程进入学习",
-    "image": "classroom-resource-lanes.svg",
+    "image": "classroom-resource-lanes.png",
     "label": "资源流转 / 角色与教学材料",
     "source": "以课程和课件为组织基础，将原始资料、不同讲稿和交互演示关联到同一学习场景。",
     "details": [
@@ -93,7 +93,7 @@
   },
   "record": {
     "title": "把零散学习内容，整理成可复用的笔记",
-    "image": "notes-record-anatomy.svg",
+    "image": "notes-record-anatomy.png",
     "label": "学习笔记 / 内容结构与追溯",
     "source": "通过统一的笔记组织方式，连接手写记录、课堂归档与对话内容，并保留必要的来源线索。",
     "details": [
@@ -116,7 +116,7 @@
   },
   "save": {
     "title": "先确认能保存，再把内容放进正确的位置",
-    "image": "notes-save-protocol.svg",
+    "image": "notes-save-protocol.png",
     "label": "学习笔记 / 保存协议与访问控制",
     "source": "保存过程同时检查笔记本访问范围和内容来源，减少误归档，并处理同一来源的重复保存。",
     "details": [
