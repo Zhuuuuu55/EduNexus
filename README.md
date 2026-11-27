@@ -48,7 +48,7 @@ python -m http.server 4173
 
 ## 独立功能展示
 
-- [模拟课堂](classroom-showcase.html)：课堂演示与两页技术讲解。
+- [模拟课堂](classroom-showcase.html)：三页课堂演示与两页技术讲解；三个 Demo 合并为一个可切换案例的入口。
 - [学习笔记](notes-showcase.html)：笔记演示与两页技术讲解。
 
-两个 HTML 分别内嵌样式、脚本和内容数据，媒体与技术图位于 `assets/learning-showcase/`，交付时请保留该目录及图片资源。使用方向键翻页，G 打开目录，F 全屏；每页演示在上方切换，文字说明位于媒体旁边。技术图共六张，位于 `assets/learning-showcase/research-v2/`。原有合并展示和阅读版本继续保留。
+两个 HTML 分别内嵌样式、脚本和内容数据，媒体与技术图位于 `assets/learning-showcase/`，交付时请保留该目录及图片资源。使用方向键翻页，G 打开目录，F 全屏；每页演示在左侧切换，文字说明位于媒体旁边，下方显示当前演示的技术设计。技术图共六张，位于 `assets/learning-showcase/research-v2/`。原有合并展示和阅读版本继续保留。
