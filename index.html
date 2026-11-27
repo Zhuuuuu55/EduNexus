@@ -685,6 +685,8 @@ section{scroll-margin-top:84px}
 <script src="assets/public-affairs.js" defer></script>
 <link rel="stylesheet" href="assets/algorithm-oj.css">
 <script src="assets/algorithm-oj.js" defer></script>
+<link rel="stylesheet" href="assets/algorithm-tutor.css">
+<script src="assets/algorithm-tutor.js" defer></script>
 </head>
 <body style="">
 
@@ -966,7 +968,96 @@ section{scroll-margin-top:84px}
 </div></section>
 
 <!-- ===== 四种模式 ===== -->
-<section class="section" id="modes"><div class="wrap"><div class="sec-head"><span class="sec-eyebrow">专业能力：分功能展示</span><h2>从统一入口，进入具体的教学任务</h2><p>按公共事务、知识学习、PPT 制作、算法练习与模拟课堂，依次展示功能和实现。</p></div><div class="tx-domain-nav"><a href="#domain-affairs">01 公共事务 ↗</a><a href="#domain-knowledge">02 知识学习 ↗</a><a href="#domain-ppt">03 PPT 制作 ↗</a><a href="#domain-code">04 算法练习 ↗</a><a href="#classroom">05 模拟课堂 ↗</a></div></div></section><section id="domain-affairs" aria-labelledby="pa-affairs-title">
+<section class="section" id="modes"><div class="wrap"><div class="sec-head"><span class="sec-eyebrow">专业能力：分功能展示</span><h2>从统一入口，进入具体的教学任务</h2><p>从算法导师开始，依次了解公共事务、知识学习、PPT 制作、算法练习与模拟课堂。</p></div><div class="tx-domain-nav has-tutor"><a href="#domain-tutor">01 算法导师 ↗</a><a href="#domain-affairs">02 公共事务 ↗</a><a href="#domain-knowledge">03 知识学习 ↗</a><a href="#domain-ppt">04 PPT 制作 ↗</a><a href="#domain-code">05 算法练习 ↗</a><a href="#classroom">06 模拟课堂 ↗</a></div></div></section><section id="domain-tutor" aria-labelledby="at-heading">
+  <header class="at-hero">
+    <div class="at-wrap at-hero-card">
+      <div class="at-hero-copy">
+        <p class="at-eyebrow">算法导师 · 分步推理与学习复盘</p>
+        <h2 id="at-heading">先想明白，<br>再写出代码</h2>
+        <p class="at-summary">从一道题、一个想法或一段出错的代码开始。先问清条件，再用提示、手推、反例和追问，把“知道答案”变成“说得清为什么”。</p>
+        <div class="at-actions"><a class="at-primary" href="#at-demo">查看 10 个实机演示 <span aria-hidden="true">↓</span></a><a class="at-secondary" href="#at-method">了解辅导过程</a></div>
+      </div>
+      <div class="at-hero-visual" role="img" aria-label="引导式学习示意：学生提问，导师从一个小例子开始，引导推导并核对边界">
+        <p class="at-visual-kicker">从“我不理解”开始</p>
+        <p class="at-question-bubble">0/1 背包为什么要倒序更新？</p>
+        <div class="at-tutor-bubble"><span>算法导师</span><strong>先看一个小例子。<br>这一步，读的是哪一轮状态？</strong></div>
+        <div class="at-visual-steps"><b>明确条件</b><span aria-hidden="true">→</span><b>逐步推导</b><span aria-hidden="true">→</span><b>核对边界</b></div>
+        <p class="at-visual-note">留下思考的下一步，让学生接着往下走。</p>
+      </div>
+    </div>
+  </header>
+  <div class="at-wrap at-content">
+    <section id="at-coverage" aria-labelledby="at-coverage-title">
+      <h3 id="at-coverage-title">学生可以怎样问</h3>
+      <div class="at-topics">
+        <article><h4>题目没读懂，先澄清</h4><p>从输入规模、限制条件和目标结果入手，识别还缺什么信息。</p><p>试问「这个思路成立，还需要哪些条件？」</p></article>
+        <article><h4>卡在中间，一步步推</h4><p>围绕当前代码或已有想法，拆开指针、状态、复杂度和算法选择。</p><p>试问「先给我一个提示，等我回答后再继续。」</p></article>
+        <article><h4>做错之后，回看原因</h4><p>用反例和边界检查思路，再把错误整理成下一次可以使用的自查方法。</p><p>试问「这些错误背后，我在哪一步想偏了？」</p></article>
+      </div>
+    </section>
+    <section id="at-demo" aria-labelledby="at-demo-heading">
+      <h3 id="at-demo-heading">10 个算法带学实机演示</h3>
+      <p class="at-intro">选择一个主题，在固定演示框内上下滚动查看完整对话。可放大截图阅读细节，也可打开原图。</p>
+      <div class="at-filters" role="group" aria-label="按算法辅导主题筛选"><button type="button" data-at-group="全部" aria-pressed="true" aria-controls="at-demo-index">全部</button><button type="button" data-at-group="提问与带学" aria-pressed="false" aria-controls="at-demo-index">提问与带学</button><button type="button" data-at-group="分析与调试" aria-pressed="false" aria-controls="at-demo-index">分析与调试</button><button type="button" data-at-group="推导与验证" aria-pressed="false" aria-controls="at-demo-index">推导与验证</button><button type="button" data-at-group="复盘与迁移" aria-pressed="false" aria-controls="at-demo-index">复盘与迁移</button></div>
+      <div class="at-library">
+        <figure class="at-viewer">
+          <div class="at-toolbar"><span id="at-scroll-help">在截图框内上下滚动 ↓</span><div class="at-toolbar-actions"><button type="button" id="at-zoom" aria-pressed="false" aria-controls="at-shot-viewport">放大 150%</button><button type="button" id="at-top" aria-controls="at-shot-viewport">回到顶部</button><a id="at-original" href="assets/algorithm-tutor/demo-01.png" target="_blank" rel="noopener" aria-label="查看案例 1 的原图（新标签页）">查看原图 ↗</a></div></div>
+          <div class="at-shot-viewport" id="at-shot-viewport" tabindex="0" role="region" aria-labelledby="at-demo-title" aria-describedby="at-scroll-help">
+            <img id="at-shot" src="assets/algorithm-tutor/demo-01.png" width="1474" height="2269" alt="案例 1：题意澄清，完整对话长截图" decoding="async">
+            <p id="at-load-error" class="at-load-error" hidden>截图暂时未能加载，请通过上方“查看原图”重试。</p>
+          </div>
+          <div class="at-scroll-meta"><span>阅读进度</span><progress id="at-progress" max="100" value="0" aria-label="截图阅读进度"></progress><span id="at-progress-text">已读 0%</span></div>
+          <figcaption aria-live="polite">
+            <p class="at-demo-group" id="at-demo-group">提问与带学</p>
+            <h4 class="at-demo-title" id="at-demo-title">题意澄清：面对不完整需求，先问清楚</h4>
+            <p class="at-caption-row"><b>学生怎么问</b><span id="at-demo-question">从数组中选出 k 个数使和最大，排序后取最大的 k 个一定对吗？先找出还需要确认的条件。</span></p>
+            <p class="at-caption-row"><b>重点看什么</b><span id="at-demo-focus">核对 k 的范围、是否必须连续、能否重复选取，先明确问题再选择算法。</span></p>
+            <p class="at-reading-note" id="at-reading-note">核对提示：固定选择 k 个、不要求连续且不重复使用时，负数本身不改变“取最大的 k 个”的最优性。</p>
+            <div class="at-paging"><button type="button" id="at-previous" disabled>← 上一个</button><span id="at-case-position">案例 01 / 10</span><button type="button" id="at-next">下一个 →</button></div>
+          </figcaption>
+        </figure>
+        <ol class="at-demo-index" id="at-demo-index" aria-label="算法导师演示列表"><li><button type="button" data-at-case="1" aria-controls="at-shot-viewport" aria-current="true"><span class="at-case-number">01</span><span class="at-case-copy"><strong>题意澄清</strong><small>面对不完整需求，先问清楚</small></span></button></li><li><button type="button" data-at-case="2" aria-controls="at-shot-viewport"><span class="at-case-number">02</span><span class="at-case-copy"><strong>启发式带学</strong><small>逐步提示，不直接给答案</small></span></button></li><li><button type="button" data-at-case="3" aria-controls="at-shot-viewport"><span class="at-case-number">03</span><span class="at-case-copy"><strong>代码调试</strong><small>定位死循环与空输入错误</small></span></button></li><li><button type="button" data-at-case="4" aria-controls="at-shot-viewport"><span class="at-case-number">04</span><span class="at-case-copy"><strong>复杂度分析</strong><small>纠正“两层循环就是平方级”的误解</small></span></button></li><li><button type="button" data-at-case="5" aria-controls="at-shot-viewport"><span class="at-case-number">05</span><span class="at-case-copy"><strong>算法选型</strong><small>根据规模和操作选择数据结构</small></span></button></li><li><button type="button" data-at-case="6" aria-controls="at-shot-viewport"><span class="at-case-number">06</span><span class="at-case-copy"><strong>动态规划推导</strong><small>把状态变化讲清楚</small></span></button></li><li><button type="button" data-at-case="7" aria-controls="at-shot-viewport"><span class="at-case-number">07</span><span class="at-case-copy"><strong>反例与证明</strong><small>检验贪心策略是否成立</small></span></button></li><li><button type="button" data-at-case="8" aria-controls="at-shot-viewport"><span class="at-case-number">08</span><span class="at-case-copy"><strong>图算法</strong><small>区分最少边数与最小总权重</small></span></button></li><li><button type="button" data-at-case="9" aria-controls="at-shot-viewport"><span class="at-case-number">09</span><span class="at-case-copy"><strong>原理逐步演示</strong><small>1-5的递归直观演示</small></span></button></li><li><button type="button" data-at-case="10" aria-controls="at-shot-viewport"><span class="at-case-number">10</span><span class="at-case-copy"><strong>学习复盘</strong><small>从做错的结果回到思考过程</small></span></button></li></ol>
+      </div>
+      <p class="at-visually-hidden" id="at-status" role="status"></p>
+      <noscript><p>启用 JavaScript 可切换案例；也可以直接打开以下原图。</p><ol><li><a href="assets/algorithm-tutor/demo-01.png" target="_blank" rel="noopener">01 题意澄清：面对不完整需求，先问清楚</a></li><li><a href="assets/algorithm-tutor/demo-02.png" target="_blank" rel="noopener">02 启发式带学：逐步提示，不直接给答案</a></li><li><a href="assets/algorithm-tutor/demo-03.png" target="_blank" rel="noopener">03 代码调试：定位死循环与空输入错误</a></li><li><a href="assets/algorithm-tutor/demo-04.png" target="_blank" rel="noopener">04 复杂度分析：纠正“两层循环就是平方级”的误解</a></li><li><a href="assets/algorithm-tutor/demo-05.png" target="_blank" rel="noopener">05 算法选型：根据规模和操作选择数据结构</a></li><li><a href="assets/algorithm-tutor/demo-06.png" target="_blank" rel="noopener">06 动态规划推导：把状态变化讲清楚</a></li><li><a href="assets/algorithm-tutor/demo-07.png" target="_blank" rel="noopener">07 反例与证明：检验贪心策略是否成立</a></li><li><a href="assets/algorithm-tutor/demo-08.png" target="_blank" rel="noopener">08 图算法：区分最少边数与最小总权重</a></li><li><a href="assets/algorithm-tutor/demo-09.png" target="_blank" rel="noopener">09 原理逐步演示：1-5的递归直观演示</a></li><li><a href="assets/algorithm-tutor/demo-10.png" target="_blank" rel="noopener">10 学习复盘：从做错的结果回到思考过程</a></li></ol></noscript>
+    </section>
+    <section id="at-method" aria-labelledby="at-method-title">
+      <h3 id="at-method-title">从一个卡点，到一次理解</h3>
+      <p class="at-intro">这些对话展示了同一条辅导路径：先读懂学生的问题和尝试，再决定补问、提示、推导还是调试，最后回到可核对的理由。</p>
+      <figure class="at-flow" aria-label="算法导师辅导流程">
+        <div class="at-flow-start">题目、已有想法，或一段出错的代码</div><div class="at-arrow" aria-hidden="true">↓</div>
+        <div class="at-flow-node at-flow-center"><h4>先确认目标与条件</h4><p>问清输入、约束、优化目标和学生已经做到哪一步；有缺口时先补问。</p></div><div class="at-arrow" aria-hidden="true">↓</div>
+        <div class="at-flow-branches">
+          <div class="at-flow-node"><small>思路还没连起来</small><h4>提示 → 尝试 → 继续推导</h4><p>从一个小问题或小例子开始，用状态表、调用顺序和反例展开关键步骤。</p></div>
+          <div class="at-flow-node"><small>代码或判断出现偏差</small><h4>复现 → 定位 → 核对修改</h4><p>追踪变量和区间变化，检查状态依赖、操作次数与算法适用条件。</p></div>
+        </div><div class="at-arrow" aria-hidden="true">↓</div>
+        <div class="at-flow-node at-flow-center"><h4>用边界和理由检验结论</h4><p>把“为什么成立”与“什么时候不成立”说清楚，再安排实际运行或提交评测。</p></div><div class="at-arrow" aria-hidden="true">↓</div>
+        <div class="at-flow-node at-flow-center at-flow-end"><h4>自己复述，再迁移到下一题</h4><p>整理错误现象、思考误区和自查方法，带着新练习检验理解。</p></div>
+        <figcaption>实录示例：二分区间不再收缩时，先手推指针变化，再讨论怎样修改。<a href="#at-demo" data-at-target="3">查看代码调试案例</a></figcaption>
+      </figure>
+      <div class="at-two"><article><h4>把讲解步幅交给学习者</h4><p>可以要求“先给提示”“暂不展示完整代码”或“换一个更小的例子”，围绕自己的卡点继续追问。</p></article><article><h4>把思考过程留在对话里</h4><p>将状态、边界、反例和复杂度写出来，方便学生回看、复述，也方便发现推导中仍需核对的地方。</p></article></div>
+    </section>
+    <section id="at-compare" aria-labelledby="at-compare-title">
+      <h3 id="at-compare-title">算法导师与 OJ 工作台怎样配合</h3>
+      <p class="at-intro">从理解问题到验证实现，分别查看推理过程与执行证据。</p>
+      <div class="at-table-frame" tabindex="0" role="region" aria-label="算法导师与 OJ 工作台职责对照"><table><thead><tr><th scope="col">对照维度</th><th scope="col">算法导师</th><th scope="col">OJ 工作台</th></tr></thead><tbody>
+        <tr><th scope="row">从哪里开始</th><td>题意、已有思路、当前代码或错误现象。</td><td>具体题目、提交代码与评测任务。</td></tr>
+        <tr><th scope="row">怎样帮助学习</th><td>补问、逐步提示、手推状态、构造反例和复盘。</td><td>运行样例、提交评测、查看输出差异和提交历史。</td></tr>
+        <tr><th scope="row">核对什么</th><td>条件是否完整，理由是否成立，边界有没有遗漏。</td><td>实际判定、通过点数、输出与对应提交记录。</td></tr>
+        <tr><th scope="row">怎样接续</th><td>根据运行反馈继续诊断，解释修复思路。</td><td>把修改后的代码重新提交，验证实际表现。</td></tr>
+      </tbody></table></div>
+      <p class="at-example">先在导师对话里理清二分查找的区间更新，再到工作台运行空数组、单元素和目标不存在等用例。<a href="#domain-code">继续查看 OJ 工作台 ↗</a></p>
+    </section>
+    <section id="at-verify" aria-labelledby="at-verify-title">
+      <h3 id="at-verify-title">复看方法与理解检查点</h3>
+      <ol class="at-verify-steps"><li>先读原问题，明确学生卡在什么地方、希望得到哪种帮助。</li><li>在演示框内滚动查看对话，跟着手推、表格或反例检查关键步骤。</li><li>尝试用自己的话复述下表要点；涉及代码时，再用实际运行核对。</li></ol>
+      <div class="at-table-frame" tabindex="0" role="region" aria-label="十个算法导师案例与理解检查点"><table><thead><tr><th scope="col">案例与原图</th><th scope="col">理解检查点</th></tr></thead><tbody><tr><th scope="row"><a href="#at-demo" data-at-target="1">01 题意澄清</a></th><td>能列出尚未明确的约束，并说明哪些条件会改变解法。</td></tr><tr><th scope="row"><a href="#at-demo" data-at-target="2">02 启发式带学</a></th><td>提示与学生当前思路衔接，学生能解释为什么从 i + 1 开始枚举。</td></tr><tr><th scope="row"><a href="#at-demo" data-at-target="3">03 代码调试</a></th><td>能复现错误原因，并用空输入、单元素和目标不存在等样例核对修复。</td></tr><tr><th scope="row"><a href="#at-demo" data-at-target="4">04 复杂度分析</a></th><td>能从总操作数解释 O(n)，并构造重置指针后达到 O(n²) 的情况。</td></tr><tr><th scope="row"><a href="#at-demo" data-at-target="5">05 算法选型</a></th><td>能解释动态更新为何影响前缀和方案，并比较树状数组与线段树的操作成本。</td></tr><tr><th scope="row"><a href="#at-demo" data-at-target="6">06 动态规划推导</a></th><td>能解释每件物品最多选一次，并找出正序更新重复使用当前物品的位置。</td></tr><tr><th scope="row"><a href="#at-demo" data-at-target="7">07 反例与证明</a></th><td>能给出推翻策略的具体反例，并说明一个例子成立不等于策略普遍成立。</td></tr><tr><th scope="row"><a href="#at-demo" data-at-target="8">08 图算法</a></th><td>能说明本例适用 Dijkstra，并对照最少边路径与最小权重路径。</td></tr><tr><th scope="row"><a href="#at-demo" data-at-target="9">09 原理逐步演示</a></th><td>能说清调用与返回的不同顺序，解释终止条件，并得到总和 15。</td></tr><tr><th scope="row"><a href="#at-demo" data-at-target="10">10 学习复盘</a></th><td>能把错误对应到区间收缩、状态依赖与优化目标，并用新题检验理解。</td></tr></tbody></table></div>
+      <p class="at-scope">展示材料为 10 张原始对话长截图，保留提问与回答的上下文。截图中的静态分析可结合边界用例继续核对；代码是否通过，以实际运行和评测为准。</p>
+    </section>
+  </div>
+  <script type="application/json" id="at-demo-data">[{"id": 1, "title": "题意澄清：面对不完整需求，先问清楚", "short": "题意澄清", "group": "提问与带学", "question": "从数组中选出 k 个数使和最大，排序后取最大的 k 个一定对吗？先找出还需要确认的条件。", "focus": "核对 k 的范围、是否必须连续、能否重复选取，先明确问题再选择算法。", "check": "能列出尚未明确的约束，并说明哪些条件会改变解法。", "note": "固定选择 k 个、不要求连续且不重复使用时，负数本身不改变“取最大的 k 个”的最优性。", "width": 1474, "height": 2269, "src": "assets/algorithm-tutor/demo-01.png"}, {"id": 2, "title": "启发式带学：逐步提示，不直接给答案", "short": "启发式带学", "group": "提问与带学", "question": "刚学数组，想做“两数之和”。每次给一个提示或问题，等我回答后再继续。", "focus": "从学生已有的两层循环思路出发，追问枚举位置和下标关系，保留学生自己推导的空间。", "check": "提示与学生当前思路衔接，学生能解释为什么从 i + 1 开始枚举。", "width": 1455, "height": 1718, "src": "assets/algorithm-tutor/demo-02.png"}, {"id": 3, "title": "代码调试：定位死循环与空输入错误", "short": "代码调试", "group": "分析与调试", "question": "二分查找有时一直不结束，空数组也会报错。先手推 [1,3]、target=3，再做小范围修改。", "focus": "逐轮记录 left、right、mid，找出区间没有收缩的位置，再检查空数组和边界返回值。", "check": "能复现错误原因，并用空输入、单元素和目标不存在等样例核对修复。", "width": 1469, "height": 3760, "src": "assets/algorithm-tutor/demo-03.png"}, {"id": 4, "title": "复杂度分析：纠正“两层循环就是平方级”的误解", "short": "复杂度分析", "group": "分析与调试", "question": "代码里有 for 和 while，为什么未必是 O(n²)？把 j = 0 移进外层循环后又会怎样？", "focus": "统计指针在整个程序中的总移动次数，对比不回退的扫描与每轮重新开始的扫描。", "check": "能从总操作数解释 O(n)，并构造重置指针后达到 O(n²) 的情况。", "width": 1470, "height": 2271, "src": "assets/algorithm-tutor/demo-04.png"}, {"id": 5, "title": "算法选型：根据规模和操作选择数据结构", "short": "算法选型", "group": "分析与调试", "question": "长度 20 万的数组，要做 20 万次单点增加和区间求和。前缀和、树状数组、线段树怎么选？", "focus": "把数据规模、更新方式、查询需求与实现成本放在一起比较，再给出适合该任务的方案。", "check": "能解释动态更新为何影响前缀和方案，并比较树状数组与线段树的操作成本。", "width": 1466, "height": 5209, "src": "assets/algorithm-tutor/demo-05.png"}, {"id": 6, "title": "动态规划推导：把状态变化讲清楚", "short": "动态规划推导", "group": "推导与验证", "question": "0/1 背包为什么倒序遍历容量？用重量 [1,3,4]、价值 [15,20,30]、容量 4 展开状态变化。", "focus": "先定义状态，再逐件查看表格，理解一维压缩后为什么需要读取上一轮的状态。", "check": "能解释每件物品最多选一次，并找出正序更新重复使用当前物品的位置。", "note": "正序误用可从重量为 1 的物品核对：同一轮更新 dp[2] 时，会读到已经更新的 dp[1]。", "width": 1453, "height": 3540, "src": "assets/algorithm-tutor/demo-06.png"}, {"id": 7, "title": "反例与证明：检验贪心策略是否成立", "short": "反例与证明", "group": "推导与验证", "question": "硬币面值 [1,3,4]，凑出 6 且硬币数最少，每次拿不超过剩余金额的最大硬币可行吗？", "focus": "把直觉写成选择过程，用 4 + 1 + 1 与 3 + 3 对照，找到反例后重新组织解题思路。", "check": "能给出推翻策略的具体反例，并说明一个例子成立不等于策略普遍成立。", "width": 1462, "height": 3025, "src": "assets/algorithm-tutor/demo-07.png"}, {"id": 8, "title": "图算法：区分最少边数与最小总权重", "short": "图算法", "group": "推导与验证", "question": "有向图中 A→B=4、A→C=1、C→B=2、B→D=1、C→D=5，求 A 到 D 的最短耗时，BFS 合适吗？", "focus": "先辨认优化目标与边权条件，再逐步更新距离，区分经过的边数和累加的总耗时。", "check": "能说明本例适用 Dijkstra，并对照最少边路径与最小权重路径。", "note": "A→B→D 是 2 条边、总耗时 5；A→C→B→D 是 3 条边、总耗时 4。", "width": 1477, "height": 2893, "src": "assets/algorithm-tutor/demo-08.png"}, {"id": 9, "title": "原理逐步演示：1-5的递归直观演示", "short": "原理逐步演示", "group": "推导与验证", "question": "用 1 + 2 + 3 + 4 + 5 解释递归：怎样调用、何时停止、如何返回？再与循环写法对照。", "focus": "沿 sum(5) 到 sum(1) 展开调用，再按返回顺序逐层累加，连接终止条件、调用过程与结果。", "check": "能说清调用与返回的不同顺序，解释终止条件，并得到总和 15。", "width": 1477, "height": 2940, "src": "assets/algorithm-tutor/demo-09.png"}, {"id": 10, "title": "学习复盘：从做错的结果回到思考过程", "short": "学习复盘", "group": "复盘与迁移", "question": "二分死循环、背包重复选取、带权图选错方法，这些错误反映了哪些思考习惯？给我三道递进练习。", "focus": "按“错误现象—背后的误解—下次如何自查”整理，把修正一题延伸为可迁移的检查习惯。", "check": "能把错误对应到区间收缩、状态依赖与优化目标，并用新题检验理解。", "width": 1468, "height": 2249, "src": "assets/algorithm-tutor/demo-10.png"}]</script>
+</section>
+<section id="domain-affairs" aria-labelledby="pa-affairs-title">
 <section class="pa-affairs-hero" aria-labelledby="pa-affairs-title">
   <div class="pa-wrap">
     <div class="pa-affairs-hero-card">
