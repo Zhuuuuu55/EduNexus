@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>MAIR·EduNexus 智联教枢</title>
+  <link rel="icon" href="assets/brand/logo.png">
+  <link rel="stylesheet" href="deck.css">
+  <script src="deck-data.js" defer></script>
+  <script src="deck.js" defer></script>
+</head>
+<body>
+  <div class="viewport" id="viewport">
+    <div class="deck" id="deck">
+      <header class="bar">
+        <button class="brand" type="button" data-jump="cover" aria-label="回到封面">
+          <img src="assets/brand/logo.png" alt="">
+          <span><strong>MAIR·EduNexus</strong><small>智联教枢</small></span>
+        </button>
+        <nav class="chapters" id="chapters" aria-label="汇报章节"></nav>
+        <button class="outline-trigger" id="outline-open" type="button" aria-haspopup="dialog"><span data-ui="outline">目录</span> <kbd>G</kbd></button>
+      </header>
+      <main id="slide" class="slide" aria-labelledby="slide-title"></main>
+      <footer class="footer">
+        <div class="progress" aria-hidden="true"><div id="progress"></div></div>
+        <span class="keyboard-hint" data-ui="hint">← → 翻页 · F 全屏</span>
+        <span class="position" id="position" aria-live="polite"></span>
+        <div class="footer-controls">
+          <button type="button" id="fullscreen" data-ui="fullscreen">全屏</button>
+          <button type="button" id="previous" data-ui="previous">← 上一页</button>
+          <select id="page-directory" aria-label="按页码跳转"></select>
+          <button type="button" id="next" class="primary" data-ui="next">下一页 →</button>
+        </div>
+      </footer>
+      <dialog id="outline" aria-labelledby="outline-title">
+        <div class="outline-head"><h2 id="outline-title" data-ui="outlineTitle">汇报目录</h2><button type="button" id="outline-close"><span data-ui="close">关闭</span> <kbd>Esc</kbd></button></div>
+        <div class="outline-list" id="outline-list"></div>
+      </dialog>
+      <dialog class="figure-dialog" id="figure-dialog" aria-labelledby="figure-title">
+        <div class="outline-head"><h2 id="figure-title"></h2><button type="button" id="figure-close"><span data-ui="close">关闭</span> <kbd>Esc</kbd></button></div>
+        <img id="figure-detail" alt="">
+      </dialog>
+    </div>
+  </div>
+</body>
+</html>
