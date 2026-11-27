@@ -4,6 +4,12 @@ EduNexus 是面向计算机教育场景的智能教学平台，将课程知识�
 
 > [打开 EduNexus 项目主页和交互工作台](https://zhuuuuu55.github.io/EduNexus/#demo)。工作台在浏览器中渲染预设对话和四种模式。完整应用的源码、课件和运行数据不随展示站发布。
 
+## 项目总汇报
+
+[在线查看 24 页总汇报](https://zhuuuuu55.github.io/EduNexus/assets/mair-edunexus/)
+
+离线单文件版可从 [GitHub Releases](https://github.com/Zhuuuuu55/EduNexus/releases) 下载。
+
 ## 本地预览
 
 在仓库目录运行：

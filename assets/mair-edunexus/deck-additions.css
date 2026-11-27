@@ -1,0 +1,37 @@
+/* Added features reuse the deck's cover, demo, and technical-slide layouts. */
+.feature-still.top-crop{background:#f6f8f7}
+.feature-still.top-crop img{object-fit:cover;object-position:top}
+.demo.extended .demo-grid{grid-template-columns:176px minmax(0,1fr);gap:17px}
+.demo.extended .demo-grid>aside{min-height:0;max-height:530px;display:flex;flex-direction:column}
+.demo.extended .tabs{overflow:auto;min-height:0;scrollbar-color:#9cc2b4 #edf5f0;overscroll-behavior:contain}
+.demo.extended .tabs button{min-height:43px;font-size:16px;padding-block:8px}
+.demo.extended .demo-copy{padding:26px 25px 20px;overflow:auto;overscroll-behavior:contain}
+.demo.extended .demo-copy h2{font-size:32px}
+.demo.extended .demo-copy p{font-size:20px;line-height:1.62;margin-top:15px}
+.demo.extended .demo-notes p{font-size:15.5px;line-height:1.45}
+.demo.extended .demo-notes{max-height:88px;overflow:auto;overscroll-behavior:contain}
+.demo.extended .tech-jump{padding-top:14px}
+.collection-controls{margin-bottom:12px;flex-shrink:0}
+.collection-controls>div{display:flex;gap:5px;margin-bottom:10px}
+.collection-controls button{border:1px solid var(--hair);background:#fff;border-radius:7px;padding:7px 8px;font-size:14px;flex:1;white-space:nowrap}
+.collection-controls button[aria-pressed=true]{background:#dbf1e9;color:#005a4c;border-color:#a5cfc1;font-weight:700}
+.collection-controls label{display:grid;gap:4px;font-size:13px;color:var(--muted)}
+.collection-controls select{width:100%;font:inherit;font-size:15px;color:var(--ink);padding:6px;border:1px solid var(--hair);border-radius:6px;background:white}
+.viewer.long-reader{display:flex;flex-direction:column;background:#f6f8f7;min-height:0}
+.reader-toolbar{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-shrink:0;padding:9px 12px;background:#e8f3ee;border-bottom:1px solid var(--hair);font-size:14px;color:#245a4e}
+.reader-toolbar>div{display:flex;gap:8px;align-items:center}
+.reader-toolbar button{font-size:13px;padding:4px 8px;border:1px solid #a9cabb;border-radius:6px;background:#fff;color:#245a4e}
+.reader-toolbar button[aria-pressed=true]{background:#176052;color:white}
+.screenshot-scroll{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;scrollbar-color:#93b9a9 #edf4ef}
+.screenshot-scroll img{display:block;width:100%;height:auto;max-width:none;object-fit:initial}
+.screenshot-scroll.is-zoomed img{width:150%}
+.screenshot-scroll:focus-visible,.record-scroll:focus-visible{outline:3px solid #008a77;outline-offset:-3px}
+.viewer.record-reader{background:white;border:1px solid var(--hair)}
+.record-scroll{height:100%;overflow:auto;overscroll-behavior:contain;padding:28px 31px;scrollbar-color:#93b9a9 #edf4ef}
+.record-scroll h3{font:700 30px/1.3 var(--serif);margin:10px 0 22px;color:var(--ink)}
+.record-scroll dl{margin:0}
+.record-scroll dt{font-size:16px;color:var(--teal);font-weight:700;border-top:1px solid var(--hair);padding-top:12px;margin-top:14px}
+.record-scroll dd{margin:7px 0 0;font-size:21px;line-height:1.65;white-space:pre-wrap;overflow-wrap:anywhere}
+.record-scroll pre{font:18px/1.5 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;padding:16px;background:#edf5f1;border-radius:9px;color:var(--ink)}
+.record-scroll img{width:100%;height:auto;display:block;margin-top:18px;object-fit:initial}
+.record-scroll small{display:block;margin-top:15px;font-size:14px;color:var(--muted)}
