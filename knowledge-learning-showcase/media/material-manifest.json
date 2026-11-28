@@ -1,0 +1,26 @@
+[
+  {
+    "id": "conversation",
+    "file": "11月28日.mp4",
+    "bytes": 22077675,
+    "sha256": "55a69d1845a84925960c362b2949cca30acdaf33888b13165ad64ab16766a93e"
+  },
+  {
+    "id": "scope",
+    "file": "66f92e4a-1456-4338-b462-2a295c387110.png",
+    "bytes": 282032,
+    "sha256": "a08f02b912db41ed2e7195e9ce07ab87beaadef9e0efeb54f93af1975fd5d15a"
+  },
+  {
+    "id": "answer",
+    "file": "19e299e9-bfa3-403c-9252-ce2da93cd5d2.png",
+    "bytes": 468214,
+    "sha256": "feb89db15cace27b283ec99603f630152b454bd319b20616d7eb007422f58805"
+  },
+  {
+    "id": "sources",
+    "file": "ec7d270c-a28c-438a-b01e-de7d508f8881.png",
+    "bytes": 574578,
+    "sha256": "11fb00bfca85a422bc7a7360b16e3f9e5e6b8bf9285a38c60c1c8045b1dc15d1"
+  }
+]
